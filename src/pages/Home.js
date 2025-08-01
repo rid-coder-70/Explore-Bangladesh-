@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <div className="home-wrapper">
             <div className="header">
-                <h1>Explore Bangla</h1>
+                <h1>Explore Bangladesh</h1>
                 <p>Discover the beauty of Bangladesh through its most iconic tourist destinations.</p>
             </div>
 
