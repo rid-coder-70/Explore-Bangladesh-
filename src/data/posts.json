@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Discover Sundarbans",
+    "excerpt": "Explore the largest mangrove forest in the world, rich in wildlife and natural beauty.",
+    "image": "sundarbans.jpg",
+    "content": "The Sundarbans is a UNESCO World Heritage Site and one of the most unique mangrove ecosystems.\nIt's home to the Royal Bengal Tiger, spotted deer, crocodiles, and many bird species.\nVisitors can enjoy boat tours, fishing, and stunning nature views.",
+    "locationUrl": "https://www.google.com/maps/place/Sundarban+Forest,+Bangladesh+Tour+Agency/@22.819162,89.5595407,17z/data=!4m15!1m8!3m7!1s0x39ff9153ac398b0b:0xeb7f29d7daf2f331!2sSundarban+Forest,+Bangladesh+Tour+Agency!8m2!3d22.8191621!4d89.5644116!10e1!16s%2Fg%2F11h10bybs4!3m5!1s0x39ff9153ac398b0b:0xeb7f29d7daf2f331!8m2!3d22.8191621!4d89.5644116!16s%2Fg%2F11h10bybs4?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 2,
+    "title": "Visit Cox’s Bazar",
+    "excerpt": "Enjoy the world’s longest natural sea beach with golden sands and beautiful views.",
+    "image": "coxsbazar.jpg",
+    "content": "Cox's Bazar stretches over 120 kilometers and is famous for its soft sandy beaches.\nIt's a popular tourist destination in Bangladesh, offering water sports, local seafood, and vibrant markets.",
+    "locationUrl": "https://www.google.com/maps/place/Cox's+Bazar/@21.4366517,91.951661,13z/data=!3m1!4b1!4m6!3m5!1s0x30adc7ea2ab928c3:0x3b539e0a68970810!8m2!3d21.4272184!4d92.0061058!16s%2Fm%2F02vk9mt?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Explore Srimangal",
+    "excerpt": "The tea capital of Bangladesh, surrounded by lush green tea gardens and hills.",
+    "image": "srimangal.jpg",
+    "content": "Srimangal is known for its tea gardens, rainforests, and wildlife sanctuaries.\nVisitors love hiking, bird watching, and tasting the delicious seven-layer tea.",
+    "locationUrl": "https://www.google.com/maps/place/Sreemangal/@24.3134835,91.7044472,14z/data=!3m1!4b1!4m6!3m5!1s0x37517a7a9ac91745:0x50f827893a88c955!8m2!3d24.3094552!4d91.7314423!16s%2Fg%2F121hlth3?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 4,
+    "title": "St. Martin’s Island",
+    "excerpt": "A serene coral island in the Bay of Bengal, perfect for beach lovers and adventurers.",
+    "image": "stmartin.jpg",
+    "content": "St. Martin's Island is the only coral island in Bangladesh, known for its crystal-clear water, coconut trees, and marine life.\nActivities include snorkeling, boat rides, and enjoying seafood by the sea.",
+    "locationUrl": "https://www.google.com/maps/place/St.+Martin's+Island/@20.6236969,92.2844258,14z/data=!3m1!4b1!4m6!3m5!1s0x30ae23c825795eb3:0xb155298fd11e255b!8m2!3d20.6237016!4d92.3233948!16s%2Fg%2F11h3lfb8rh?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 5,
+    "title": "Jaflong",
+    "excerpt": "A picturesque valley known for hills, tea gardens, and the Dawki River.",
+    "image": "jaflong.jpg",
+    "content": "Located in Sylhet, Jaflong is famous for its stone collection activities, scenic views, and proximity to the Indian border.\nIt’s a perfect spot for nature photography and cultural exploration.",
+    "locationUrl": "https://www.google.com/maps/place/Jaflong/@25.1611301,91.9870661,14z/data=!3m1!4b1!4m6!3m5!1s0x375044bd7d747f47:0xef2b6cb5bcade375!8m2!3d25.1633829!4d92.0175242!16s%2Fm%2F02x6bkv?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 6,
+    "title": "Tanguar Haor",
+    "excerpt": "A wetland of international importance offering stunning birdwatching and boat experiences.",
+    "image": "tanguarhaor.jpg",
+    "content": "Tanguar Haor is a biodiversity hotspot and a haven for migratory birds.\nIn the rainy season, the entire haor transforms into a vast freshwater lake ideal for scenic boat trips.",
+    "locationUrl": "https://www.google.com/maps/place/Tanguar+Haor/@25.140043,91.0857529,17z/data=!3m1!4b1!4m6!3m5!1s0x375730f860eb18ed:0x5c762e956df41b4f!8m2!3d25.140043!4d91.0883278!16s%2Fm%2F02rw0s_?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 7,
+    "title": "Explore Bandarban",
+    "excerpt": "Discover the hills, tribal culture, and breathtaking views in the Chittagong Hill Tracts.",
+    "image": "bandarban.jpg",
+    "content": "Bandarban offers lush green mountains, waterfalls, and ethnic diversity.\nYou can hike to Nilgiri and Nilachal, or visit Boga Lake and tribal villages for an unforgettable experience.",
+    "locationUrl": "https://www.google.com/maps/place/Bandarban/@22.2041156,92.1959798,14z/data=!3m1!4b1!4m6!3m5!1s0x30ad6a188414e62b:0xa4c3198f81ba90d0!8m2!3d22.196146!4d92.2175885!16s%2Fg%2F1216lblk?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 8,
+    "title": "Hakaluki Haor",
+    "excerpt": "A large wetland rich in biodiversity, perfect for birdwatchers and nature lovers.",
+    "image": "hakalukihaor.jpg",
+    "content": "Hakaluki Haor is one of the biggest marsh wetlands in Bangladesh.\nIt is a sanctuary for migratory birds and aquatic life, and offers peaceful boat rides through its vast waters.",
+    "locationUrl": "https://www.google.com/maps/place/Hakaluki+Haor/@24.6731399,91.9544034,12z/data=!3m1!4b1!4m6!3m5!1s0x3751b98b71b0020d:0x99d93902c2ae4c7f!8m2!3d24.6766667!4d92.0469151!16s%2Fm%2F03d6fnf?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 9,
+    "title": "Kuakata Sea Beach",
+    "excerpt": "The only place in South Asia where you can watch both sunrise and sunset over the sea.",
+    "image": "kuakataseabeach.jpg",
+    "content": "Kuakata is known as the 'Daughter of the Sea'.\nThis beach offers scenic beauty, cultural diversity, and peaceful surroundings.\nIt's ideal for relaxation, swimming, and enjoying coastal cuisine.",
+    "locationUrl": "https://www.google.com/maps/place/Kuakata+Sea+Beach/@21.8353003,90.093036,12z/data=!3m1!4b1!4m6!3m5!1s0x30aa62836f83b573:0x31e7fec84916471!8m2!3d21.8031005!4d90.1822792!16s%2Fg%2F1ynnq1thx?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 10,
+    "title": "Rangamati",
+    "excerpt": "A tranquil hill district famous for Kaptai Lake and its serene natural beauty.",
+    "image": "rangamati.jpg",
+    "content": "Rangamati is located beside the beautiful Kaptai Lake, surrounded by green hills.\nVisitors enjoy boat rides, traditional crafts, tribal culture, and picturesque landscapes.",
+    "locationUrl": "https://www.google.com/maps/place/Rangamati/@22.6427281,92.1319351,13z/data=!3m1!4b1!4m6!3m5!1s0x3752b5a7b4c418f9:0xa63c343bd4a12112!8m2!3d22.6619561!4d92.1611123!16s%2Fm%2F0466t11?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 11,
+    "title": "Sadapathor",
+    "excerpt": "A hidden gem in Sylhet with clear waters and bright white stones.",
+    "image": "sadapathor1.jpg",
+    "content": "Sadapathor is a popular tourist spot where river water flows over smooth white stones.\nIt's perfect for photography, picnics, and relaxing in nature.",
+    "locationUrl": "https://www.google.com/maps/place/Bholagonj+Sada+Pathor+Tourist+Spot/@25.1107067,91.7468898,17z/data=!3m1!4b1!4m6!3m5!1s0x3750f12fc6bb2419:0xeb24a1d36f253e17!8m2!3d25.1107067!4d91.7494647!16s%2Fg%2F11fn8nlhz1?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  }
+]
