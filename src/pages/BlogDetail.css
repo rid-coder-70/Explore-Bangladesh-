@@ -1,5 +1,5 @@
 .blog-detail-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
@@ -31,13 +31,97 @@
   margin-bottom: 1.5rem;
 }
 
+.more-img-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  /* transition: all 0.3s ease-in-out; */
+  text-align: center;
+}
+
+.more-img-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+/* Down arrow under "More Pictures" heading */
+.more-img-box h3::after {
+  content: "▼"; /* Unicode down arrow */
+  display: block;
+  font-size: 1.2rem;
+  color: #ff4500;
+  margin-top: 0.3rem;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Carousel Image Styling */
+.more-img-box-sty {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1rem auto;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Carousel Dots Custom Styling */
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #999;
+  opacity: 0.6;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff4500; /* Active dot color */
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .more-img-box {
+    padding: 0.5rem;
+  }
+
+  .more-img-box-sty {
+    max-height: 300px;
+  }
+
+  .more-img-box h3 {
+    font-size: 1.2rem;
+  }
+}
+
 /* 📦 Button Group Container */
 .button-group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 
 /* 📍 Location Box Button */

@@ -4,6 +4,12 @@
     "title": "Discover Sundarbans",
     "excerpt": "Explore the largest mangrove forest in the world, rich in wildlife and natural beauty.",
     "image": "sundarbans.jpg",
+    "moreImages": [
+      "sundarbans1.jpg", 
+      "sundarbans2.jpg", 
+      "sundarbans3.jpg",
+      "sundarbans4.jpg"
+    ],
     "content": "The Sundarbans is a UNESCO World Heritage Site and one of the most unique mangrove ecosystems.\nIt's home to the Royal Bengal Tiger, spotted deer, crocodiles, and many bird species.\nVisitors can enjoy boat tours, fishing, and stunning nature views.",
     "locationUrl": "https://www.google.com/maps/place/Sundarban+Forest,+Bangladesh+Tour+Agency/@22.819162,89.5595407,17z/data=!4m15!1m8!3m7!1s0x39ff9153ac398b0b:0xeb7f29d7daf2f331!2sSundarban+Forest,+Bangladesh+Tour+Agency!8m2!3d22.8191621!4d89.5644116!10e1!16s%2Fg%2F11h10bybs4!3m5!1s0x39ff9153ac398b0b:0xeb7f29d7daf2f331!8m2!3d22.8191621!4d89.5644116!16s%2Fg%2F11h10bybs4?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -12,6 +18,12 @@
     "title": "Visit Cox’s Bazar",
     "excerpt": "Enjoy the world’s longest natural sea beach with golden sands and beautiful views.",
     "image": "coxsbazar.jpg",
+    "moreImages": [
+      "coxsbazar1.jpg", 
+      "coxsbazar2.jpg", 
+      "coxsbazar3.jpg",
+      "coxsbazar4.jpg"
+    ],
     "content": "Cox's Bazar stretches over 120 kilometers and is famous for its soft sandy beaches.\nIt's a popular tourist destination in Bangladesh, offering water sports, local seafood, and vibrant markets.",
     "locationUrl": "https://www.google.com/maps/place/Cox's+Bazar/@21.4366517,91.951661,13z/data=!3m1!4b1!4m6!3m5!1s0x30adc7ea2ab928c3:0x3b539e0a68970810!8m2!3d21.4272184!4d92.0061058!16s%2Fm%2F02vk9mt?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -20,6 +32,12 @@
     "title": "Explore Srimangal",
     "excerpt": "The tea capital of Bangladesh, surrounded by lush green tea gardens and hills.",
     "image": "srimangal.jpg",
+    "moreImages": [
+      "srimangal1.jpg", 
+      "srimangal2.jpg", 
+      "srimangal3.jpg",
+      "srimangal4.jpg"
+    ],
     "content": "Srimangal is known for its tea gardens, rainforests, and wildlife sanctuaries.\nVisitors love hiking, bird watching, and tasting the delicious seven-layer tea.",
     "locationUrl": "https://www.google.com/maps/place/Sreemangal/@24.3134835,91.7044472,14z/data=!3m1!4b1!4m6!3m5!1s0x37517a7a9ac91745:0x50f827893a88c955!8m2!3d24.3094552!4d91.7314423!16s%2Fg%2F121hlth3?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -28,6 +46,12 @@
     "title": "St. Martin’s Island",
     "excerpt": "A serene coral island in the Bay of Bengal, perfect for beach lovers and adventurers.",
     "image": "stmartin.jpg",
+    "moreImages": [
+      "stmartin1.jpg", 
+      "stmartin2.jpg", 
+      "stmartin3.jpg",
+      "stmartin4.jpg"
+    ],
     "content": "St. Martin's Island is the only coral island in Bangladesh, known for its crystal-clear water, coconut trees, and marine life.\nActivities include snorkeling, boat rides, and enjoying seafood by the sea.",
     "locationUrl": "https://www.google.com/maps/place/St.+Martin's+Island/@20.6236969,92.2844258,14z/data=!3m1!4b1!4m6!3m5!1s0x30ae23c825795eb3:0xb155298fd11e255b!8m2!3d20.6237016!4d92.3233948!16s%2Fg%2F11h3lfb8rh?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -36,6 +60,12 @@
     "title": "Jaflong",
     "excerpt": "A picturesque valley known for hills, tea gardens, and the Dawki River.",
     "image": "jaflong.jpg",
+    "moreImages": [
+      "jaflong1.jpg", 
+      "jaflong2.jpg", 
+      "jaflong3.jpg",
+      "jaflong4.jpg"
+    ],
     "content": "Located in Sylhet, Jaflong is famous for its stone collection activities, scenic views, and proximity to the Indian border.\nIt’s a perfect spot for nature photography and cultural exploration.",
     "locationUrl": "https://www.google.com/maps/place/Jaflong/@25.1611301,91.9870661,14z/data=!3m1!4b1!4m6!3m5!1s0x375044bd7d747f47:0xef2b6cb5bcade375!8m2!3d25.1633829!4d92.0175242!16s%2Fm%2F02x6bkv?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -44,6 +74,12 @@
     "title": "Tanguar Haor",
     "excerpt": "A wetland of international importance offering stunning birdwatching and boat experiences.",
     "image": "tanguarhaor.jpg",
+    "moreImages": [
+      "tanguarhaor1.jpg", 
+      "tanguarhaor2.jpg", 
+      "tanguarhaor3.jpg",
+      "tanguarhaor4.jpg"
+    ],
     "content": "Tanguar Haor is a biodiversity hotspot and a haven for migratory birds.\nIn the rainy season, the entire haor transforms into a vast freshwater lake ideal for scenic boat trips.",
     "locationUrl": "https://www.google.com/maps/place/Tanguar+Haor/@25.140043,91.0857529,17z/data=!3m1!4b1!4m6!3m5!1s0x375730f860eb18ed:0x5c762e956df41b4f!8m2!3d25.140043!4d91.0883278!16s%2Fm%2F02rw0s_?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -52,6 +88,12 @@
     "title": "Explore Bandarban",
     "excerpt": "Discover the hills, tribal culture, and breathtaking views in the Chittagong Hill Tracts.",
     "image": "bandarban.jpg",
+    "moreImages": [
+      "bandarban1.jpg", 
+      "bandarban2.jpg", 
+      "bandarban3.jpg",
+      "bandarban4.jpg"
+    ],
     "content": "Bandarban offers lush green mountains, waterfalls, and ethnic diversity.\nYou can hike to Nilgiri and Nilachal, or visit Boga Lake and tribal villages for an unforgettable experience.",
     "locationUrl": "https://www.google.com/maps/place/Bandarban/@22.2041156,92.1959798,14z/data=!3m1!4b1!4m6!3m5!1s0x30ad6a188414e62b:0xa4c3198f81ba90d0!8m2!3d22.196146!4d92.2175885!16s%2Fg%2F1216lblk?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -60,6 +102,12 @@
     "title": "Hakaluki Haor",
     "excerpt": "A large wetland rich in biodiversity, perfect for birdwatchers and nature lovers.",
     "image": "hakalukihaor.jpg",
+    "moreImages": [
+      "hakalukihaor1.jpg", 
+      "hakalukihaor2.jpg", 
+      "hakalukihaor3.jpg",
+      "hakalukihaor4.jpg"
+    ],
     "content": "Hakaluki Haor is one of the biggest marsh wetlands in Bangladesh.\nIt is a sanctuary for migratory birds and aquatic life, and offers peaceful boat rides through its vast waters.",
     "locationUrl": "https://www.google.com/maps/place/Hakaluki+Haor/@24.6731399,91.9544034,12z/data=!3m1!4b1!4m6!3m5!1s0x3751b98b71b0020d:0x99d93902c2ae4c7f!8m2!3d24.6766667!4d92.0469151!16s%2Fm%2F03d6fnf?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -68,6 +116,12 @@
     "title": "Kuakata Sea Beach",
     "excerpt": "The only place in South Asia where you can watch both sunrise and sunset over the sea.",
     "image": "kuakataseabeach.jpg",
+    "moreImages": [
+      "kuakataseabeach1.jpg", 
+      "kuakataseabeach2.jpg", 
+      "kuakataseabeach3.jpg",
+      "kuakataseabeach4.jpg"
+    ],
     "content": "Kuakata is known as the 'Daughter of the Sea'.\nThis beach offers scenic beauty, cultural diversity, and peaceful surroundings.\nIt's ideal for relaxation, swimming, and enjoying coastal cuisine.",
     "locationUrl": "https://www.google.com/maps/place/Kuakata+Sea+Beach/@21.8353003,90.093036,12z/data=!3m1!4b1!4m6!3m5!1s0x30aa62836f83b573:0x31e7fec84916471!8m2!3d21.8031005!4d90.1822792!16s%2Fg%2F1ynnq1thx?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -76,6 +130,12 @@
     "title": "Rangamati",
     "excerpt": "A tranquil hill district famous for Kaptai Lake and its serene natural beauty.",
     "image": "rangamati.jpg",
+    "moreImages": [
+      "rangamati1.jpg", 
+      "rangamati2.jpg", 
+      "rangamati3.jpg",
+      "rangamati4.jpg"
+    ],
     "content": "Rangamati is located beside the beautiful Kaptai Lake, surrounded by green hills.\nVisitors enjoy boat rides, traditional crafts, tribal culture, and picturesque landscapes.",
     "locationUrl": "https://www.google.com/maps/place/Rangamati/@22.6427281,92.1319351,13z/data=!3m1!4b1!4m6!3m5!1s0x3752b5a7b4c418f9:0xa63c343bd4a12112!8m2!3d22.6619561!4d92.1611123!16s%2Fm%2F0466t11?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
@@ -84,79 +144,139 @@
     "title": "Sadapathor",
     "excerpt": "A hidden gem in Sylhet with clear waters and bright white stones.",
     "image": "sadapathor1.jpg",
+    "moreImages": [
+      "sadapathor1.jpg", 
+      "sadapathor2.jpg", 
+      "sadapathor3.jpg",
+      "sadapathor4.jpg"
+    ],
     "content": "Sadapathor is a popular tourist spot where river water flows over smooth white stones.\nIt's perfect for photography, picnics, and relaxing in nature.",
     "locationUrl": "https://www.google.com/maps/place/Bholagonj+Sada+Pathor+Tourist+Spot/@25.1107067,91.7468898,17z/data=!3m1!4b1!4m6!3m5!1s0x3750f12fc6bb2419:0xeb24a1d36f253e17!8m2!3d25.1107067!4d91.7494647!16s%2Fg%2F11fn8nlhz1?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
-        "id": 12,
-        "title": "Bagerhat Museum",
-        "excerpt": "A repository of ancient artifacts and history of Bagerhat.",
-        "image": "bagerhatmuseum.jpg",
-        "content": "The Bagerhat Museum offers insights into the medieval Islamic architecture and history of Khan Jahan Ali’s time.",
-        "locationUrl": "https://www.google.com/maps/place/Bagerhat+Museum/@22.6735611,89.7401551,17z/data=!3m1!4b1!4m6!3m5!1s0x39fff45155047553:0xe6f266f0d9ba5064!8m2!3d22.6735611!4d89.74273!16s%2Fg%2F11g_rlh18m?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 13,
-        "title": "Fakir Lalon Shah Mazar",
-        "excerpt": "The shrine of the famous Baul saint, Lalon Shah.",
-        "image": "fakirlalonshahmazar.jpg",
-        "content": "A spiritual and cultural place honoring Lalon Shah, with annual fairs, music, and Baul gatherings.",
-        "locationUrl": "https://www.google.com/maps/place/Lalon+Shah's+Shrine/@23.8957877,89.1495235,17z/data=!3m1!4b1!4m6!3m5!1s0x39fe96dd91dc3ae5:0x6a3031f10bb89c16!8m2!3d23.8957877!4d89.1520984!16s%2Fg%2F1w0h5y8f?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 14,
-        "title": "Hardinge Bridge",
-        "excerpt": "An iconic railway bridge over the Padma River.",
-        "image": "hardingebridge.jpg",
-        "content": "Hardinge Bridge is a British-era steel railway bridge known for its architecture and historical importance.",
-        "locationUrl": "https://www.google.com/maps/place/Hardinge+Bridge/@24.0679958,89.0274314,17z/data=!3m1!4b1!4m6!3m5!1s0x39fea1e6a68cbdf3:0x4c33283b15d3f44e!8m2!3d24.0679958!4d89.0300063!16zL20vMGI1Ymx2?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 15,
-        "title": "Jamtola Beach",
-        "excerpt": "A quiet, natural sea beach inside the Sundarbans.",
-        "image": "jamtolabeach.jpg",
-        "content": "Jamtola Beach is known for its untouched natural beauty and proximity to the Sundarbans forest.",
-        "locationUrl": "https://www.google.com/maps/place/Jamtola+Beach/@21.8473374,89.7921232,14z/data=!3m1!4b1!4m6!3m5!1s0x3a0089c340c2bbbd:0x7bc0a6a21235d32f!8m2!3d21.8470771!4d89.824162!16s%2Fg%2F1tgj_12l?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 16,
-        "title": "Kaptai Lake",
-        "excerpt": "A serene artificial lake surrounded by lush hills in Rangamati.",
-        "image": "kaptailake.jpg",
-        "content": "Kaptai Lake is popular for boat rides, fishing, and picturesque views in the hill district of Rangamati.",
-        "locationUrl": "https://www.google.com/maps/place/Kaptai+Lake/@22.6923255,92.027996,11z/data=!3m1!4b1!4m6!3m5!1s0x30ad4b6b58d1ee59:0x21e5fefae772aac5!8m2!3d22.5927679!4d92.2138289!16zL20vMGN3cWc3?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 17,
-        "title": "Khan Jahan Ali’s Tomb",
-        "excerpt": "A majestic tomb built in honor of the great Muslim saint.",
-        "image": "khanjahanalitomb.jpg",
-        "content": "The tomb of Khan Jahan Ali is a significant historical and religious site located near the Sixty Dome Mosque.",
-        "locationUrl": "https://www.google.com/maps/place/Khan+Jahan+Ali+Mazar+More+Square+Bagerhat/@22.7303914,89.5714546,11.75z/data=!4m10!1m2!2m1!1sKhan+Jahan+Ali%E2%80%99s+Tomb!3m6!1s0x39fff5ae1978fd3f:0xfcfbe9dcc4eaa37!8m2!3d22.6649282!4d89.7585777!15sChdLaGFuIEphaGFuIEFsaeKAmXMgVG9tYloXIhVraGFuIGphaGFuIGFsaSdzIHRvbWKSARBvZmZfcm9hZGluZ19hcmVhmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJzd01GWlhkSHBWVjJRMFZWVlZNV0l6U2xSV1ZURnhWR3BzZDFNeFJSQUKqAVkQASoZIhVraGFuIGphaGFuIGFsaSdzIHRvbWIoADIfEAEiG2MK5nJviY16-Ae64715CM2ri3uj1amP4W5bYjIZEAIiFWtoYW4gamFoYW4gYWxpJ3MgdG9tYuABAPoBBAgAEDE!16s%2Fg%2F11pzvvxkyz?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 18,
-        "title": "Michael Madhusudan Dutta Memorial House",
-        "excerpt": "The ancestral home of Bengali poet Michael Madhusudan Dutta.",
-        "image": "michaelmadhusudanduttamemorialhouse.jpg",
-        "content": "This memorial is dedicated to the great poet and dramatist, showcasing his life and literary works.",
-        "locationUrl": "https://www.google.com/maps/place/Michael+Madhusudan+Datta+Memorial/@22.8191721,89.1608006,17z/data=!3m1!4b1!4m6!3m5!1s0x39ff68ae482e0da7:0x5e03bc86c407c7b5!8m2!3d22.8191721!4d89.1633755!16s%2Fg%2F11c2y942t0?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 19,
-        "title": "Sixty Dome Mosque (Shaat Gombuj)",
-        "excerpt": "An architectural masterpiece from the Sultanate period.",
-        "image": "shaatgambujmosque.jpg",
-        "content": "The Sixty Dome Mosque is a UNESCO World Heritage Site and one of the largest mosques from the medieval era in Bangladesh.",
-        "locationUrl": "https://www.google.com/maps/place/Sixty+Dome+Mosque/@22.6745023,89.7392559,17z/data=!3m1!4b1!4m6!3m5!1s0x39fff4565f03d17d:0x657f7377a89d5da7!8m2!3d22.6745023!4d89.7418308!16zL20vMDhjeTVk?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-        "id": 20,
-        "title": "Shilaidaha Kuthi Bari",
-        "excerpt": "A historic house where Rabindranath Tagore lived and wrote some of his masterpieces.",
-        "image": "shilaidahakuthibari.jpg",
-        "content": "This charming country house is a reminder of Tagore's influence in Bengali literature and culture.",
-        "locationUrl": "https://www.google.com/maps/place/Shilaidaha+Rabindra+Kuthibari/@23.9199375,89.2174876,17z/data=!3m1!4b1!4m6!3m5!1s0x39fe9044f06df655:0xbc543e0ea99e1a8d!8m2!3d23.9199375!4d89.2200625!16s%2Fg%2F1tcztc2z?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
-    }
+    "id": 12,
+    "title": "Bagerhat Museum",
+    "excerpt": "A repository of ancient artifacts and history of Bagerhat.",
+    "image": "bagerhatmuseum.jpg",
+    "moreImages": [
+      "bagerhatmuseum1.jpg", 
+      "bagerhatmuseum2.jpg", 
+      "bagerhatmuseum3.jpg",
+      "bagerhatmuseum4.jpg"
+    ],
+    "content": "The Bagerhat Museum offers insights into the medieval Islamic architecture and history of Khan Jahan Ali’s time.",
+    "locationUrl": "https://www.google.com/maps/place/Bagerhat+Museum/@22.6735611,89.7401551,17z/data=!3m1!4b1!4m6!3m5!1s0x39fff45155047553:0xe6f266f0d9ba5064!8m2!3d22.6735611!4d89.74273!16s%2Fg%2F11g_rlh18m?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 13,
+    "title": "Fakir Lalon Shah Mazar",
+    "excerpt": "The shrine of the famous Baul saint, Lalon Shah.",
+    "image": "fakirlalonshahmazar.jpg",
+    "moreImages": [
+      "fakirlalonshahmazar1.jpg", 
+      "fakirlalonshahmazar2.jpg", 
+      "fakirlalonshahmazar3.jpg",
+      "fakirlalonshahmazar4.jpg"
+    ],
+    "content": "A spiritual and cultural place honoring Lalon Shah, with annual fairs, music, and Baul gatherings.",
+    "locationUrl": "https://www.google.com/maps/place/Lalon+Shah's+Shrine/@23.8957877,89.1495235,17z/data=!3m1!4b1!4m6!3m5!1s0x39fe96dd91dc3ae5:0x6a3031f10bb89c16!8m2!3d23.8957877!4d89.1520984!16s%2Fg%2F1w0h5y8f?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 14,
+    "title": "Hardinge Bridge",
+    "excerpt": "An iconic railway bridge over the Padma River.",
+    "image": "hardingebridge.jpg",
+    "moreImages": [
+      "hardingebridge1.jpg", 
+      "hardingebridge2.jpg", 
+      "hardingebridge3.jpg",
+      "hardingebridge4.jpg"
+    ],
+    "content": "Hardinge Bridge is a British-era steel railway bridge known for its architecture and historical importance.",
+    "locationUrl": "https://www.google.com/maps/place/Hardinge+Bridge/@24.0679958,89.0274314,17z/data=!3m1!4b1!4m6!3m5!1s0x39fea1e6a68cbdf3:0x4c33283b15d3f44e!8m2!3d24.0679958!4d89.0300063!16zL20vMGI1Ymx2?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 15,
+    "title": "Jamtola Beach",
+    "excerpt": "A quiet, natural sea beach inside the Sundarbans.",
+    "image": "jamtolabeach.jpg",
+    "moreImages": [
+      "jamtolabeach1.jpg", 
+      "jamtolabeach2.jpg", 
+      "jamtolabeach3.jpg",
+      "jamtolabeach4.jpg"
+    ],
+    "content": "Jamtola Beach is known for its untouched natural beauty and proximity to the Sundarbans forest.",
+    "locationUrl": "https://www.google.com/maps/place/Jamtola+Beach/@21.8473374,89.7921232,14z/data=!3m1!4b1!4m6!3m5!1s0x3a0089c340c2bbbd:0x7bc0a6a21235d32f!8m2!3d21.8470771!4d89.824162!16s%2Fg%2F1tgj_12l?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 16,
+    "title": "Kaptai Lake",
+    "excerpt": "A serene artificial lake surrounded by lush hills in Rangamati.",
+    "image": "kaptailake.jpg",
+    "moreImages": [
+      "kaptailake1.jpg", 
+      "kaptailake2.jpg", 
+      "kaptailake3.jpg",
+      "kaptailake4.jpg"
+    ],
+    "content": "Kaptai Lake is popular for boat rides, fishing, and picturesque views in the hill district of Rangamati.",
+    "locationUrl": "https://www.google.com/maps/place/Kaptai+Lake/@22.6923255,92.027996,11z/data=!3m1!4b1!4m6!3m5!1s0x30ad4b6b58d1ee59:0x21e5fefae772aac5!8m2!3d22.5927679!4d92.2138289!16zL20vMGN3cWc3?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 17,
+    "title": "Khan Jahan Ali’s Tomb",
+    "excerpt": "A majestic tomb built in honor of the great Muslim saint.",
+    "image": "khanjahanalitomb.jpg",
+    "moreImages": [
+      "khanjahanalitomb1.jpg", 
+      "khanjahanalitomb2.jpg", 
+      "khanjahanalitomb3.jpg",
+      "khanjahanalitomb4.jpg"
+    ],
+    "content": "The tomb of Khan Jahan Ali is a significant historical and religious site located near the Sixty Dome Mosque.",
+    "locationUrl": "https://www.google.com/maps/place/Khan+Jahan+Ali+Mazar+More+Square+Bagerhat/@22.7303914,89.5714546,11.75z/data=!4m10!1m2!2m1!1sKhan+Jahan+Ali%E2%80%99s+Tomb!3m6!1s0x39fff5ae1978fd3f:0xfcfbe9dcc4eaa37!8m2!3d22.6649282!4d89.7585777!15sChdLaGFuIEphaGFuIEFsaeKAmXMgVG9tYloXIhVraGFuIGphaGFuIGFsaSdzIHRvbWKSARBvZmZfcm9hZGluZ19hcmVhmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJzd01GWlhkSHBWVjJRMFZWVlZNV0l6U2xSV1ZURnhWR3BzZDFNeFJSQUKqAVkQASoZIhVraGFuIGphaGFuIGFsaSdzIHRvbWIoADIfEAEiG2MK5nJviY16-Ae64715CM2ri3uj1amP4W5bYjIZEAIiFWtoYW4gamFoYW4gYWxpJ3MgdG9tYuABAPoBBAgAEDE!16s%2Fg%2F11pzvvxkyz?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 18,
+    "title": "Michael Madhusudan Dutta Memorial House",
+    "excerpt": "The ancestral home of Bengali poet Michael Madhusudan Dutta.",
+    "image": "michaelmadhusudanduttamemorialhouse.jpg",
+    "moreImages": [
+      "michaelmadhusudanduttamemorialhouse1.jpg", 
+      "michaelmadhusudanduttamemorialhouse2.jpg", 
+      "michaelmadhusudanduttamemorialhouse3.jpg",
+      "michaelmadhusudanduttamemorialhouse4.jpg"
+    ],
+    "content": "This memorial is dedicated to the great poet and dramatist, showcasing his life and literary works.",
+    "locationUrl": "https://www.google.com/maps/place/Michael+Madhusudan+Datta+Memorial/@22.8191721,89.1608006,17z/data=!3m1!4b1!4m6!3m5!1s0x39ff68ae482e0da7:0x5e03bc86c407c7b5!8m2!3d22.8191721!4d89.1633755!16s%2Fg%2F11c2y942t0?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 19,
+    "title": "Sixty Dome Mosque (Shaat Gombuj)",
+    "excerpt": "An architectural masterpiece from the Sultanate period.",
+    "image": "shaatgambujmosque.jpg",
+    "moreImages": [
+      "shaatgambujmosque1.jpg", 
+      "shaatgambujmosque2.jpg", 
+      "shaatgambujmosque3.jpg",
+      "shaatgambujmosque4.jpg"
+    ],
+    "content": "The Sixty Dome Mosque is a UNESCO World Heritage Site and one of the largest mosques from the medieval era in Bangladesh.",
+    "locationUrl": "https://www.google.com/maps/place/Sixty+Dome+Mosque/@22.6745023,89.7392559,17z/data=!3m1!4b1!4m6!3m5!1s0x39fff4565f03d17d:0x657f7377a89d5da7!8m2!3d22.6745023!4d89.7418308!16zL20vMDhjeTVk?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "id": 20,
+    "title": "Shilaidaha Kuthi Bari",
+    "excerpt": "A historic house where Rabindranath Tagore lived and wrote some of his masterpieces.",
+    "image": "shilaidahakuthibari.jpg",
+    "moreImages": [
+      "shilaidahakuthibari1.jpg", 
+      "shilaidahakuthibari2.jpg", 
+      "shilaidahakuthibari3.jpg",
+      "shilaidahakuthibari4.jpg"
+    ],
+    "content": "This charming country house is a reminder of Tagore's influence in Bengali literature and culture.",
+    "locationUrl": "https://www.google.com/maps/place/Shilaidaha+Rabindra+Kuthibari/@23.9199375,89.2174876,17z/data=!3m1!4b1!4m6!3m5!1s0x39fe9044f06df655:0xbc543e0ea99e1a8d!8m2!3d23.9199375!4d89.2200625!16s%2Fg%2F1tcztc2z?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+  }
 ]
