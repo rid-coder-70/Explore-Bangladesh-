@@ -35,7 +35,7 @@ export default function About() {
       <h2>Join Our Community</h2>
       <p>
         Whether you're planning your next trip or simply love learning about different cultures,
-        we invite you to explore, share, and be part of the Explore Bangla community.
+        we invite you to explore, share, and be part of the Explore Bangladesh community.
         Follow us on social media and subscribe to our newsletter for the latest updates and travel tips!
       </p>
 
