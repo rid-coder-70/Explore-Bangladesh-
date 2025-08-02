@@ -129,7 +129,28 @@ a {
     transform: translateY(-6px);
   }
 }
+.logo-img {
+  display: block;              /* Remove inline gaps */
+  height: 50px;                /* Fixed navbar height */
+  width: auto;                 /* Maintain aspect ratio */
+  max-width: 180px;            /* Limit max width to prevent huge logo */
+  margin-right: 12px;
+  border-radius: 8px;
+  background-color: #f5f5f5;   /* Light background to contrast navbar */
+  padding: 6px 12px;           /* More horizontal padding for wide logo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05) contrast(1.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-sizing: content-box;
+  object-fit: contain;         /* Keep entire logo visible */
+  user-select: none;
+}
 
+.logo-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -153,7 +174,19 @@ a {
     font-size: 0.95rem;
     width: 100%;
   }
+  .logo-img {
+    height: 40px;
+    padding: 4px;
+    margin-right: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  .logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
 }
+
+
 
 
 
@@ -162,4 +195,6 @@ main {
   padding: 2rem;
   min-height: 80vh;
 }
+
+
 
