@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import blogData from "../data/posts.json";
 import "./BlogDetail.css";
 
-// Image map
+// Image map for all 20 images
 const importImages = {
   "sundarbans.jpg": require("../assets/images/sundarbans.jpg"),
   "coxsbazar.jpg": require("../assets/images/coxsbazar.jpg"),
@@ -16,6 +16,15 @@ const importImages = {
   "kuakataseabeach.jpg": require("../assets/images/kuakataseabeach.jpg"),
   "rangamati.jpg": require("../assets/images/rangamati.jpg"),
   "sadapathor1.jpg": require("../assets/images/sadapathor.jpg"),
+  "bagerhatmuseum.jpg": require("../assets/images/bagerhatmuseum.jpg"),
+  "fakirlalonshahmazar.jpg": require("../assets/images/fakirlalonshahmazar.jpg"),
+  "hardingebridge.jpg": require("../assets/images/hardingebridge.jpg"),
+  "jamtolabeach.jpg": require("../assets/images/jamtolabeach.jpg"),
+  "kaptailake.jpg": require("../assets/images/kaptailake.jpg"),
+  "khanjahanalitomb.jpg": require("../assets/images/khanjahanalitomb.jpg"),
+  "michaelmadhusudanduttamemorialhouse.jpg": require("../assets/images/michaelmadhusudanduttamemorialhouse.jpg"),
+  "shaatgambujmosque.jpg": require("../assets/images/shaatgambujmosque.jpg"),
+  "shilaidahakuthibari.jpg": require("../assets/images/shilaidahakuthibari.jpg"),
 };
 
 const BlogDetail = () => {

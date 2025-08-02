@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from '../assets/images/logo1.png';
+import logo from '../assets/images/logo3.png';
 
 export default function Navbar() {
     return (
         <nav className="navbar">
             <div style={{ display: "flex", alignItems: "center" }}>
-                <img src={logo} alt="Explore Bangladesh Logo" className="logo-img" />
+                <Link to="/">
+                    <img src={logo} alt="Explore Bangladesh Logo" className="logo-img" />
+                </Link>
                 <div className="logo_bounce">
                     <span>E</span><span>x</span><span>p</span><span>l</span>
                     <span>o</span><span>r</span><span>e</span>
