@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Cox's Bazar",
+        "category": "Beach",
+        "desc": "The world's longest natural sandy sea beach."
+    },
+    {
+        "name": "Sundarbans",
+        "category": "Forest",
+        "desc": "The largest mangrove forest & home to the Royal Bengal Tiger."
+    },
+    {
+        "name": "Srimangal",
+        "category": "Nature",
+        "desc": "Tea capital of Bangladesh with lush green landscapes."
+    },
+    {
+        "name": "Saint Martin's Island",
+        "category": "Beach",
+        "desc": "A beautiful coral island in the Bay of Bengal."
+    },
+    {
+        "name": "Jaflong",
+        "category": "Nature",
+        "desc": "Picturesque hills and crystal-clear river views."
+    },
+    {
+        "name": "Tanguar Haor",
+        "category": "Wetland",
+        "desc": "Vast wetland ecosystem, perfect for bird watching."
+    },
+    {
+        "name": "Bandarban",
+        "category": "Hill",
+        "desc": "Hilly district full of waterfalls, tribal villages, and scenic beauty."
+    },
+    {
+        "name": "Hakaluki Haor",
+        "category": "Wetland",
+        "desc": "One of the largest marsh wetlands in Asia."
+    },
+    {
+        "name": "Kuakata Sea Beach",
+        "category": "Beach",
+        "desc": "Witness both sunrise and sunset over the sea."
+    },
+    {
+        "name": "Rangamati",
+        "category": "Hill",
+        "desc": "Peaceful lake district with tribal culture & natural beauty."
+    },
+    {
+        "name": "Sada Pathor",
+        "category": "Nature",
+        "desc": "Stunning stone river area surrounded by hills."
+    },
+    {
+        "name": "Bagerhat Museum",
+        "category": "Historical",
+        "desc": "Repository of ancient artifacts from medieval Bangladesh."
+    },
+    {
+        "name": "Fakir Lalon Shah Mazar",
+        "category": "Historical",
+        "desc": "Shrine of the famous Baul saint, Lalon Shah."
+    },
+    {
+        "name": "Hardinge Bridge",
+        "category": "Historical",
+        "desc": "Iconic British-era railway bridge over the Padma River."
+    },
+    {
+        "name": "Jamtola Beach",
+        "category": "Beach",
+        "desc": "Untouched natural beach inside the Sundarbans."
+    },
+    {
+        "name": "Kaptai Lake",
+        "category": "Hill",
+        "desc": "Serene artificial lake surrounded by lush hills."
+    },
+    {
+        "name": "Khan Jahan Ali's Tomb",
+        "category": "Historical",
+        "desc": "Significant historical and religious site near Bagerhat."
+    },
+    {
+        "name": "M.M. Dutta Memorial",
+        "category": "Historical",
+        "desc": "Ancestral home of poet Michael Madhusudan Dutta."
+    },
+    {
+        "name": "Sixty Dome Mosque",
+        "category": "Historical",
+        "desc": "UNESCO World Heritage — medieval Islamic architecture."
+    },
+    {
+        "name": "Shilaidaha Kuthi Bari",
+        "category": "Historical",
+        "desc": "Historic house where Rabindranath Tagore wrote masterpieces."
+    }
+]

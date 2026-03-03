@@ -1,34 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/images/logo3.png';
+import { useDarkMode } from '../context/DarkModeContext';
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 
 export default function Navbar() {
+    const { isDark, toggleDark } = useDarkMode();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
+
     return (
         <nav className="navbar">
-            <div style={{ display: "flex", alignItems: "center" }}>
-                <Link to="/">
+            <div className="navbar-brand">
+                <Link to="/" onClick={closeMenu} className="brand-link">
                     <img src={logo} alt="Explore Bangladesh Logo" className="logo-img" />
+                    <div className="logo_bounce">
+                        {/* <span className="text-full">
+                            <span>E</span><span>x</span><span>p</span><span>l</span>
+                            <span>o</span><span>r</span><span>e</span>
+                            <span>&nbsp;</span><span>B</span><span>a</span><span>n</span>
+                            <span>g</span><span>l</span><span>a</span><span>d</span>
+                            <span>e</span><span>s</span><span>h</span>
+                        </span> */}
+                        <span className="text-mobile">
+                            <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span><span>r</span><span>e</span><span>&nbsp;</span><span>B</span><span>D</span>
+                        </span>
+                    </div>
                 </Link>
-                <div className="logo_bounce">
-                    <span>E</span><span>x</span><span>p</span><span>l</span>
-                    <span>o</span><span>r</span><span>e</span>
-                    <sapn> </sapn> <span>B</span><span>a</span><span>n</span>
-                    <span>g</span><span>l</span><span>a</span><span>d</span>
-                    <span>e</span><span>s</span><span>h</span>
-                </div>
             </div>
-            <ul className="nav-links">
-                <li><Link to="/">
-                    <span>H</span><span>o</span><span>m</span><span>e</span>
-                </Link></li>
-                <li><Link to="/about">
-                    <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
-                </Link></li>
-                <li><Link to="/contact">
-                    <span>C</span><span>o</span><span>n</span><span>t</span>
-                    <span>a</span><span>c</span><span>t</span>
-                </Link></li>
+
+            <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                {isOpen ? <FaTimes /> : <FaBars />}
+            </div>
+
+            <div className={`nav-overlay ${isOpen ? 'active' : ''}`} onClick={closeMenu}></div>
+
+            <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                {[
+                    { path: '/', label: 'Home' },
+                    { path: '/gallery', label: 'Gallery' },
+                    { path: '/about', label: 'About' },
+                    { path: '/contact', label: 'Contact' }
+                ].map((link) => (
+                    <li key={link.path}>
+                        <Link to={link.path} onClick={closeMenu}>
+                            {link.label.split('').map((char, i) => (
+                                <span key={i}>{char === ' ' ? '\u00A0' : char}</span>
+                            ))}
+                        </Link>
+                    </li>
+                ))}
+                <li className="nav-item-btn">
+                    <button
+                        className="dark-mode-btn"
+                        onClick={() => { toggleDark(); closeMenu(); }}
+                        aria-label="Toggle dark mode"
+                        title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                    >
+                        {isDark ? <FaSun className="icon-spin" /> : <FaMoon />}
+                    </button>
+                </li>
             </ul>
-        </nav >
+        </nav>
     );
 }

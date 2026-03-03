@@ -2,11 +2,12 @@
   {
     "id": 1,
     "title": "Discover Sundarbans",
+    "category": "Forest",
     "excerpt": "Explore the largest mangrove forest in the world, rich in wildlife and natural beauty.",
     "image": "sundarbans.jpg",
     "moreImages": [
-      "sundarbans1.jpg", 
-      "sundarbans2.jpg", 
+      "sundarbans1.jpg",
+      "sundarbans2.jpg",
       "sundarbans3.jpg",
       "sundarbans4.jpg"
     ],
@@ -15,12 +16,13 @@
   },
   {
     "id": 2,
-    "title": "Visit Cox’s Bazar",
-    "excerpt": "Enjoy the world’s longest natural sea beach with golden sands and beautiful views.",
+    "title": "Visit Cox's Bazar",
+    "category": "Beach",
+    "excerpt": "Enjoy the world's longest natural sea beach with golden sands and beautiful views.",
     "image": "coxsbazar.jpg",
     "moreImages": [
-      "coxsbazar1.jpg", 
-      "coxsbazar2.jpg", 
+      "coxsbazar1.jpg",
+      "coxsbazar2.jpg",
       "coxsbazar3.jpg",
       "coxsbazar4.jpg"
     ],
@@ -30,11 +32,12 @@
   {
     "id": 3,
     "title": "Explore Srimangal",
+    "category": "Nature",
     "excerpt": "The tea capital of Bangladesh, surrounded by lush green tea gardens and hills.",
     "image": "srimangal.jpg",
     "moreImages": [
-      "srimangal1.jpg", 
-      "srimangal2.jpg", 
+      "srimangal1.jpg",
+      "srimangal2.jpg",
       "srimangal3.jpg",
       "srimangal4.jpg"
     ],
@@ -43,12 +46,13 @@
   },
   {
     "id": 4,
-    "title": "St. Martin’s Island",
+    "title": "St. Martin's Island",
+    "category": "Beach",
     "excerpt": "A serene coral island in the Bay of Bengal, perfect for beach lovers and adventurers.",
     "image": "stmartin.jpg",
     "moreImages": [
-      "stmartin1.jpg", 
-      "stmartin2.jpg", 
+      "stmartin1.jpg",
+      "stmartin2.jpg",
       "stmartin3.jpg",
       "stmartin4.jpg"
     ],
@@ -58,25 +62,27 @@
   {
     "id": 5,
     "title": "Jaflong",
+    "category": "Nature",
     "excerpt": "A picturesque valley known for hills, tea gardens, and the Dawki River.",
     "image": "jaflong.jpg",
     "moreImages": [
-      "jaflong1.jpg", 
-      "jaflong2.jpg", 
+      "jaflong1.jpg",
+      "jaflong2.jpg",
       "jaflong3.jpg",
       "jaflong4.jpg"
     ],
-    "content": "Located in Sylhet, Jaflong is famous for its stone collection activities, scenic views, and proximity to the Indian border.\nIt’s a perfect spot for nature photography and cultural exploration.",
+    "content": "Located in Sylhet, Jaflong is famous for its stone collection activities, scenic views, and proximity to the Indian border.\nIt's a perfect spot for nature photography and cultural exploration.",
     "locationUrl": "https://www.google.com/maps/place/Jaflong/@25.1611301,91.9870661,14z/data=!3m1!4b1!4m6!3m5!1s0x375044bd7d747f47:0xef2b6cb5bcade375!8m2!3d25.1633829!4d92.0175242!16s%2Fm%2F02x6bkv?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "id": 6,
     "title": "Tanguar Haor",
+    "category": "Wetland",
     "excerpt": "A wetland of international importance offering stunning birdwatching and boat experiences.",
     "image": "tanguarhaor.jpg",
     "moreImages": [
-      "tanguarhaor1.jpg", 
-      "tanguarhaor2.jpg", 
+      "tanguarhaor1.jpg",
+      "tanguarhaor2.jpg",
       "tanguarhaor3.jpg",
       "tanguarhaor4.jpg"
     ],
@@ -86,11 +92,12 @@
   {
     "id": 7,
     "title": "Explore Bandarban",
+    "category": "Hill",
     "excerpt": "Discover the hills, tribal culture, and breathtaking views in the Chittagong Hill Tracts.",
     "image": "bandarban.jpg",
     "moreImages": [
-      "bandarban1.jpg", 
-      "bandarban2.jpg", 
+      "bandarban1.jpg",
+      "bandarban2.jpg",
       "bandarban3.jpg",
       "bandarban4.jpg"
     ],
@@ -100,11 +107,12 @@
   {
     "id": 8,
     "title": "Hakaluki Haor",
+    "category": "Wetland",
     "excerpt": "A large wetland rich in biodiversity, perfect for birdwatchers and nature lovers.",
     "image": "hakalukihaor.jpg",
     "moreImages": [
-      "hakalukihaor1.jpg", 
-      "hakalukihaor2.jpg", 
+      "hakalukihaor1.jpg",
+      "hakalukihaor2.jpg",
       "hakalukihaor3.jpg",
       "hakalukihaor4.jpg"
     ],
@@ -114,11 +122,12 @@
   {
     "id": 9,
     "title": "Kuakata Sea Beach",
+    "category": "Beach",
     "excerpt": "The only place in South Asia where you can watch both sunrise and sunset over the sea.",
     "image": "kuakataseabeach.jpg",
     "moreImages": [
-      "kuakataseabeach1.jpg", 
-      "kuakataseabeach2.jpg", 
+      "kuakataseabeach1.jpg",
+      "kuakataseabeach2.jpg",
       "kuakataseabeach3.jpg",
       "kuakataseabeach4.jpg"
     ],
@@ -128,11 +137,12 @@
   {
     "id": 10,
     "title": "Rangamati",
+    "category": "Hill",
     "excerpt": "A tranquil hill district famous for Kaptai Lake and its serene natural beauty.",
     "image": "rangamati.jpg",
     "moreImages": [
-      "rangamati1.jpg", 
-      "rangamati2.jpg", 
+      "rangamati1.jpg",
+      "rangamati2.jpg",
       "rangamati3.jpg",
       "rangamati4.jpg"
     ],
@@ -142,11 +152,12 @@
   {
     "id": 11,
     "title": "Sadapathor",
+    "category": "Nature",
     "excerpt": "A hidden gem in Sylhet with clear waters and bright white stones.",
     "image": "sadapathor1.jpg",
     "moreImages": [
-      "sadapathor1.jpg", 
-      "sadapathor2.jpg", 
+      "sadapathor1.jpg",
+      "sadapathor2.jpg",
       "sadapathor3.jpg",
       "sadapathor4.jpg"
     ],
@@ -156,25 +167,27 @@
   {
     "id": 12,
     "title": "Bagerhat Museum",
+    "category": "Historical",
     "excerpt": "A repository of ancient artifacts and history of Bagerhat.",
     "image": "bagerhatmuseum.jpg",
     "moreImages": [
-      "bagerhatmuseum1.jpg", 
-      "bagerhatmuseum2.jpg", 
+      "bagerhatmuseum1.jpg",
+      "bagerhatmuseum2.jpg",
       "bagerhatmuseum3.jpg",
       "bagerhatmuseum4.jpg"
     ],
-    "content": "The Bagerhat Museum offers insights into the medieval Islamic architecture and history of Khan Jahan Ali’s time.",
+    "content": "The Bagerhat Museum offers insights into the medieval Islamic architecture and history of Khan Jahan Ali's time.",
     "locationUrl": "https://www.google.com/maps/place/Bagerhat+Museum/@22.6735611,89.7401551,17z/data=!3m1!4b1!4m6!3m5!1s0x39fff45155047553:0xe6f266f0d9ba5064!8m2!3d22.6735611!4d89.74273!16s%2Fg%2F11g_rlh18m?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "id": 13,
     "title": "Fakir Lalon Shah Mazar",
+    "category": "Historical",
     "excerpt": "The shrine of the famous Baul saint, Lalon Shah.",
     "image": "fakirlalonshahmazar.jpg",
     "moreImages": [
-      "fakirlalonshahmazar1.jpg", 
-      "fakirlalonshahmazar2.jpg", 
+      "fakirlalonshahmazar1.jpg",
+      "fakirlalonshahmazar2.jpg",
       "fakirlalonshahmazar3.jpg",
       "fakirlalonshahmazar4.jpg"
     ],
@@ -184,11 +197,12 @@
   {
     "id": 14,
     "title": "Hardinge Bridge",
+    "category": "Historical",
     "excerpt": "An iconic railway bridge over the Padma River.",
     "image": "hardingebridge.jpg",
     "moreImages": [
-      "hardingebridge1.jpg", 
-      "hardingebridge2.jpg", 
+      "hardingebridge1.jpg",
+      "hardingebridge2.jpg",
       "hardingebridge3.jpg",
       "hardingebridge4.jpg"
     ],
@@ -198,11 +212,12 @@
   {
     "id": 15,
     "title": "Jamtola Beach",
+    "category": "Beach",
     "excerpt": "A quiet, natural sea beach inside the Sundarbans.",
     "image": "jamtolabeach.jpg",
     "moreImages": [
-      "jamtolabeach1.jpg", 
-      "jamtolabeach2.jpg", 
+      "jamtolabeach1.jpg",
+      "jamtolabeach2.jpg",
       "jamtolabeach3.jpg",
       "jamtolabeach4.jpg"
     ],
@@ -212,11 +227,12 @@
   {
     "id": 16,
     "title": "Kaptai Lake",
+    "category": "Hill",
     "excerpt": "A serene artificial lake surrounded by lush hills in Rangamati.",
     "image": "kaptailake.jpg",
     "moreImages": [
-      "kaptailake1.jpg", 
-      "kaptailake2.jpg", 
+      "kaptailake1.jpg",
+      "kaptailake2.jpg",
       "kaptailake3.jpg",
       "kaptailake4.jpg"
     ],
@@ -225,26 +241,28 @@
   },
   {
     "id": 17,
-    "title": "Khan Jahan Ali’s Tomb",
+    "title": "Khan Jahan Ali's Tomb",
+    "category": "Historical",
     "excerpt": "A majestic tomb built in honor of the great Muslim saint.",
     "image": "khanjahanalitomb.jpg",
     "moreImages": [
-      "khanjahanalitomb1.jpg", 
-      "khanjahanalitomb2.jpg", 
+      "khanjahanalitomb1.jpg",
+      "khanjahanalitomb2.jpg",
       "khanjahanalitomb3.jpg",
       "khanjahanalitomb4.jpg"
     ],
     "content": "The tomb of Khan Jahan Ali is a significant historical and religious site located near the Sixty Dome Mosque.",
-    "locationUrl": "https://www.google.com/maps/place/Khan+Jahan+Ali+Mazar+More+Square+Bagerhat/@22.7303914,89.5714546,11.75z/data=!4m10!1m2!2m1!1sKhan+Jahan+Ali%E2%80%99s+Tomb!3m6!1s0x39fff5ae1978fd3f:0xfcfbe9dcc4eaa37!8m2!3d22.6649282!4d89.7585777!15sChdLaGFuIEphaGFuIEFsaeKAmXMgVG9tYloXIhVraGFuIGphaGFuIGFsaSdzIHRvbWKSARBvZmZfcm9hZGluZ19hcmVhmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJzd01GWlhkSHBWVjJRMFZWVlZNV0l6U2xSV1ZURnhWR3BzZDFNeFJSQUKqAVkQASoZIhVraGFuIGphaGFuIGFsaSdzIHRvbWIoADIfEAEiG2MK5nJviY16-Ae64715CM2ri3uj1amP4W5bYjIZEAIiFWtoYW4gamFoYW4gYWxpJ3MgdG9tYuABAPoBBAgAEDE!16s%2Fg%2F11pzvvxkyz?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
+    "locationUrl": "https://www.google.com/maps/place/Khan+Jahan+Ali+Mazar+More+Square+Bagerhat/@22.7303914,89.5714546,11.75z"
   },
   {
     "id": 18,
-    "title": "Michael Madhusudan Dutta Memorial House",
+    "title": "Michael Madhusudan Dutta Memorial",
+    "category": "Historical",
     "excerpt": "The ancestral home of Bengali poet Michael Madhusudan Dutta.",
     "image": "michaelmadhusudanduttamemorialhouse.jpg",
     "moreImages": [
-      "michaelmadhusudanduttamemorialhouse1.jpg", 
-      "michaelmadhusudanduttamemorialhouse2.jpg", 
+      "michaelmadhusudanduttamemorialhouse1.jpg",
+      "michaelmadhusudanduttamemorialhouse2.jpg",
       "michaelmadhusudanduttamemorialhouse3.jpg",
       "michaelmadhusudanduttamemorialhouse4.jpg"
     ],
@@ -254,11 +272,12 @@
   {
     "id": 19,
     "title": "Sixty Dome Mosque (Shaat Gombuj)",
+    "category": "Historical",
     "excerpt": "An architectural masterpiece from the Sultanate period.",
     "image": "shaatgambujmosque.jpg",
     "moreImages": [
-      "shaatgambujmosque1.jpg", 
-      "shaatgambujmosque2.jpg", 
+      "shaatgambujmosque1.jpg",
+      "shaatgambujmosque2.jpg",
       "shaatgambujmosque3.jpg",
       "shaatgambujmosque4.jpg"
     ],
@@ -268,11 +287,12 @@
   {
     "id": 20,
     "title": "Shilaidaha Kuthi Bari",
+    "category": "Historical",
     "excerpt": "A historic house where Rabindranath Tagore lived and wrote some of his masterpieces.",
     "image": "shilaidahakuthibari.jpg",
     "moreImages": [
-      "shilaidahakuthibari1.jpg", 
-      "shilaidahakuthibari2.jpg", 
+      "shilaidahakuthibari1.jpg",
+      "shilaidahakuthibari2.jpg",
       "shilaidahakuthibari3.jpg",
       "shilaidahakuthibari4.jpg"
     ],

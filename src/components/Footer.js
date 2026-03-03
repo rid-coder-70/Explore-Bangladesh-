@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Footer.css"; 
+import toast from "react-hot-toast";
+import {
+  FaFacebookF, FaInstagram, FaTwitter, FaYoutube,
+  FaHome, FaImages, FaInfoCircle, FaEnvelope, FaHeart, FaPaperPlane
+} from "react-icons/fa";
+import "./Footer.css";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email.trim()) {
-      setSubscribed(true);
+      toast.success("Thank you for subscribing to our newsletter!");
       setEmail("");
     }
   };
@@ -18,79 +22,73 @@ export default function Footer() {
     <footer className="footer_sty">
       <div className="footer-content">
 
-        {/* Quick Links */}
+
+
+        <div className="footer-section footer-brand">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+            <h3 style={{ margin: 0 }}>Explore Bangladesh</h3>
+          </div>
+          <p>
+            Your ultimate guide to the most iconic, breathtaking, and culturally rich
+            destinations across Bangladesh.
+          </p>
+        </div>
+
+
+
         <div className="footer-section">
-          <h3>Explore Bangladesh</h3>
+          <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/"><FaHome style={{ marginRight: '8px' }} /> Home</Link></li>
+            <li><Link to="/gallery"><FaImages style={{ marginRight: '8px' }} /> Gallery</Link></li>
+            <li><Link to="/about"><FaInfoCircle style={{ marginRight: '8px' }} /> About</Link></li>
+            <li><Link to="/contact"><FaEnvelope style={{ marginRight: '8px' }} /> Contact</Link></li>
           </ul>
         </div>
 
-        {/* Newsletter Signup */}
+
+
         <div className="footer-section">
           <h3>Newsletter</h3>
-          <p>Subscribe for the latest travel tips & updates</p>
+          <p>Subscribe for the latest travel tips &amp; updates</p>
           <form onSubmit={handleSubscribe} className="newsletter-form">
             <input
               type="email"
+              id="footer-newsletter-email"
               placeholder="Your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              aria-label="Email for newsletter"
             />
-            <button type="submit">Subscribe</button>
+            <button type="submit"><FaPaperPlane /></button>
           </form>
-          {subscribed && <p className="success-msg">Thank you for subscribing!</p>}
         </div>
 
-        {/* Social Media Links */}
+
+
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a
-              href="https://facebook.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="facebook"
-            >
-              <i className="fab fa-facebook-square"></i>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="facebook">
+              <FaFacebookF />
             </a>
-            <a
-              href="https://instagram.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="instagram"
-            >
-              <i className="fab fa-instagram"></i>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="instagram">
+              <FaInstagram />
             </a>
-            <a
-              href="https://twitter.com/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="twitter"
-            >
-              <i className="fab fa-twitter-square"></i>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="twitter">
+              <FaTwitter />
             </a>
-            <a
-              href="https://youtube.com/yourchannel"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="youtube"
-            >
-              <i className="fab fa-youtube-square"></i>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="youtube">
+              <FaYoutube />
             </a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        © 2025 Explore Bangla. All rights reserved.
+        <p>© 2026 Explore Bangladesh. All rights reserved.</p>
+        <p className="footer-credit">Made with <FaHeart style={{ color: '#ff4d4d' }} /> for Bangladesh</p>
       </div>
     </footer>
   );
