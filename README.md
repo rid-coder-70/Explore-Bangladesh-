@@ -11,6 +11,9 @@ Explore Bangladesh is a modern, high-performance web application built with **Re
 
 ## 🚀 Key Features
 
+- **🗺️ District-wise Exploration**: Destinations categorized by District and Division for precise discovery.
+- **🥘 Bilingual Cultural Highlights**: Local food and traditional crafts showcased in both English and Bangla.
+- **📽️ Cinematic Animations**: Smooth, high-end scroll and entrance animations powered by `framer-motion`.
 - **📍 Interactive Spot Discovery**: Browse popular tourist destinations with a high-performance grid layout.
 - **📖 In-depth Travel Blogs**: Detailed articles for each destination covering history, culture, and travel tips.
 - **🖼️ Premium Gallery**: A visually stunning image gallery with optimized assets for fast loading.
@@ -27,6 +30,7 @@ Explore Bangladesh is a modern, high-performance web application built with **Re
 - **Frontend Core**: [React.js](https://reactjs.org/) (Hooks & Functional Components)
 - **Routing**: [React Router 7](https://reactrouter.com/)
 - **Styling**: Vanilla CSS (Custom Grid & Flexbox)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 - **UI Feedback**: [React Hot Toast](https://react-hot-toast.com/)
 - **Image Handling**: [React Slick](https://react-slick.neostack.com/) & Optimized static assets
