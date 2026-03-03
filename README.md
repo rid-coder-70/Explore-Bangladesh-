@@ -8,16 +8,6 @@ A React web application showcasing the most iconic tourist destinations of Bangl
 
 ---
 
-## Project Preview
-
-### Desktop View
-![Desktop View](./screenshots/desktop-view.png)
-
-### Mobile View (Responsive)
-<img src="./screenshots/mobile-view.png" width="300" alt="Mobile View" />
-
----
-
 ## Features
 
 - Responsive grid layout displaying popular tourist spots
