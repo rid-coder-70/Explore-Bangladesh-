@@ -40,5 +40,5 @@ A React web application showcasing the most iconic tourist destinations of Bangl
 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-github-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/rid-coder-70/Explore-Bangladesh-
+cd Explore-Bangladesh-
