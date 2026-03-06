@@ -63,7 +63,7 @@ const CATEGORY_COLORS = {
 
 
 
-const heroBgs = ['coxsbazar.jpg', 'bandarban.jpg', 'sundarbans.jpg', 'rangamati.jpg'];
+const heroBgs = ['coxsbazar2.jpg', 'bandarban.jpg', 'tanguarhaor1.jpg', 'srimangal1.jpg'];
 
 const Home = () => {
     const [touristSpots, setTouristSpots] = useState([]);
@@ -290,14 +290,15 @@ const Home = () => {
                             <motion.div
                                 key={spot.id}
                                 className="spot-card"
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.5, delay: (index % 6) * 0.1 }}
+                                transition={{ duration: 0.6, type: 'spring', bounce: 0.3 }}
+                                whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5, zIndex: 10, boxShadow: '0 25px 50px -12px rgba(45, 137, 229, 0.25)' }}
                             >
                                 <div className="spot-image-wrapper">
                                     <img
-                                        src={imageMap[spot.image] || ''}
+                                        src={spot.image.startsWith('http') ? spot.image : (imageMap[spot.image] || '')}
                                         alt={spot.title}
                                         className="spot-image"
                                         loading="lazy"

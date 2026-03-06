@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from '../assets/images/logo3.png';
 import { useDarkMode } from '../context/DarkModeContext';
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
     const { isDark, toggleDark } = useDarkMode();
@@ -12,7 +13,12 @@ export default function Navbar() {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <nav className="navbar">
+        <motion.nav
+            className="navbar"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1, type: "spring", stiffness: 90, damping: 15 }}
+        >
             <div className="navbar-brand">
                 <Link to="/" onClick={closeMenu} className="brand-link">
                     <img src={logo} alt="Explore Bangladesh Logo" className="logo-img" />
@@ -59,10 +65,10 @@ export default function Navbar() {
                         aria-label="Toggle dark mode"
                         title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                     >
-                        {isDark ? <FaSun className="icon-spin" /> : <FaMoon />}
+                        {isDark ? <FaSun className="day-mode-anim" /> : <FaMoon />}
                     </button>
                 </li>
             </ul>
-        </nav>
+        </motion.nav>
     );
 }
