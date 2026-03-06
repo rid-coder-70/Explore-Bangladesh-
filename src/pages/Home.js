@@ -8,6 +8,7 @@ import {
 import imageMap from '../utils/imageLoader';
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
 import './Home.css';
 
 
@@ -249,8 +250,15 @@ const Home = () => {
                             </button>
                         </div>
                     ) : (
-                        filteredSpots.map(spot => (
-                            <div key={spot.id} className="spot-card">
+                        filteredSpots.map((spot, index) => (
+                            <motion.div
+                                key={spot.id}
+                                className="spot-card"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: (index % 6) * 0.1 }}
+                            >
                                 <div className="spot-image-wrapper">
                                     <img
                                         src={imageMap[spot.image] || ''}
@@ -278,7 +286,7 @@ const Home = () => {
                                         <FracturedText text="Read More →" />
                                     </Link>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     )}
                 </div>
