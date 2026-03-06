@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-    FaPlane, FaSearch, FaTimes, FaGlobe, FaUmbrellaBeach,
-    FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaArrowDown, FaMapMarkerAlt
+    FaPlane, FaSearch, FaTimes, FaGlobe, FaUmbrellaBeach, FaArrowDown, FaMapMarkerAlt
 } from 'react-icons/fa';
 import imageMap from '../utils/imageLoader';
 import { TypeAnimation } from 'react-type-animation';
