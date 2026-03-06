@@ -598,5 +598,380 @@
         "bn": "বাউল সংগীতের বাদ্যযন্ত্র এবং রবীন্দ্র-স্মৃতি বিজড়িত শিল্পকর্ম"
       }
     }
+  },
+  {
+    "id": 21,
+    "title": "Ahsan Manzil",
+    "category": "Historical",
+    "district": "Dhaka",
+    "division": "Dhaka",
+    "excerpt": "The Pink Palace, once the official residential palace of the Nawab of Dhaka.",
+    "image": "ahsanmanzil.jpg",
+    "moreImages": ["ahsanmanzil1.jpg", "ahsanmanzil2.jpg"],
+    "content": "Located on the banks of the Buriganga River, this architectural marvel is a symbol of the Nawabi era. It now serves as a national museum showcasing historical artifacts.",
+    "locationUrl": "https://www.google.com/maps/place/Ahsan+Manzil+Museum/@23.7085464,90.4034579,797m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3755b9047a855555:0xdb6be1e307885b57!8m2!3d23.7085464!4d90.4060328!16zL20vMDYzbng5?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "October to March",
+    "transport": "Rickshaw, Bus, or Boat in Old Dhaka",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Old Dhaka's Kacchi Biryani and Bakarkhani",
+        "bn": "পুরান ঢাকার কাচ্চি বিরিয়ানি এবং বাকরখানি"
+      },
+      "traditionalCrafts": {
+        "en": "Muslin-inspired fabrics and brassware",
+        "bn": "মসলিন-অনুপ্রাণিত কাপড় এবং পিতলের তৈজসপত্র"
+      }
+    }
+  },
+  {
+    "id": 22,
+    "title": "Lalbagh Fort",
+    "category": "Historical",
+    "district": "Dhaka",
+    "division": "Dhaka",
+    "excerpt": "An incomplete 17th-century Mughal fort complex in Old Dhaka.",
+    "image": "lalbaghfort.jpg",
+    "moreImages": ["lalbagh1.jpg", "lalbagh2.jpg"],
+    "content": "The fort includes the Tomb of Pari Bibi, the Lalbagh Mosque, and the Diwan-i-Aam. It is one of the most popular Mughal heritage sites in Bangladesh.",
+    "locationUrl": "https://www.google.com/maps/place/Lalbagh+Fort/@23.7188605,90.3855847,797m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3755b8d900000001:0x4e16316ffc66e862!8m2!3d23.7188605!4d90.3881596!16zL20vMDVkYl9s?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter (November to February)",
+    "transport": "Bus or CNG from Dhaka Center",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Shahi Borhani and Pesta Sorbet",
+        "bn": "শাহী বোরহানি এবং পেস্তা শরবত"
+      },
+      "traditionalCrafts": {
+        "en": "Traditional Jamdani Sarees",
+        "bn": "ঐতিহ্যবাহী জামদানি শাড়ি"
+      }
+    }
+  },
+  {
+    "id": 23,
+    "title": "Mainamati & Shalban Vihara",
+    "category": "Historical",
+    "district": "Comilla",
+    "division": "Chittagong",
+    "excerpt": "An ancient Buddhist archaeological site dating back to the 8th century.",
+    "image": "shalbanvihara.jpg",
+    "moreImages": ["mainamati1.jpg", "mainamati2.jpg"],
+    "content": "A center of Buddhist culture, this site features several stupas and a museum with terracotta plaques and ancient coins.",
+    "locationUrl": "https://www.google.com/maps/place/Shalban+Bihar/@23.4262227,91.1350036,799m/data=!3m2!1e3!4b1!4m6!3m5!1s0x375479f83e59c861:0x7c6df5e5e9f699e7!8m2!3d23.4262227!4d91.1375785!16s%2Fm%2F0bs69tq?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "October to March",
+    "transport": "Bus from Dhaka or Chittagong",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Comilla's Rasmalai and Khadi clothing",
+        "bn": "কুমিল্লার বিখ্যাত রসমলাই"
+      },
+      "traditionalCrafts": {
+        "en": "Hand-woven Khadi fabrics",
+        "bn": "হাতে বোনা খাদি কাপড়"
+      }
+    }
+  },
+  {
+    "id": 24,
+    "title": "Somapura Mahavihara",
+    "category": "Historical",
+    "district": "Naogaon",
+    "division": "Rajshahi",
+    "excerpt": "One of the most famous Buddhist monasteries in the Indian subcontinent.",
+    "image": "paharpur.jpg",
+    "moreImages": ["paharpur1.jpg", "paharpur2.jpg"],
+    "content": "A UNESCO World Heritage Site in Paharpur, representing the architecture of the Pala Empire. It influenced Buddhist architecture as far as Indonesia.",
+    "locationUrl": "https://www.google.com/maps/place/Sompur+Mahavihara/@25.0316885,88.9706674,1327m/data=!3m1!1e3!4m6!3m5!1s0x39fc8f1cd3684259:0x2fa1fbfef3d89234!8m2!3d25.0310522!4d88.9769126!16s%2Fm%2F02x0rt4?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter Season",
+    "transport": "Train or Bus to Naogaon",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Naogaon's special Sandesh and sweets",
+        "bn": "নওগাঁর বিশেষ প্যারা সন্দেশ"
+      },
+      "traditionalCrafts": {
+        "en": "Terracotta art and clay pottery",
+        "bn": "পোড়ামাটির শিল্প এবং মাটির পাত্র"
+      }
+    }
+  },
+  {
+    "id": 25,
+    "title": "Bishanakandi",
+    "category": "Nature",
+    "district": "Sylhet",
+    "division": "Sylhet",
+    "excerpt": "Where several layers of the Khasi Hills meet at a single point.",
+    "image": "bishanakandi.jpg",
+    "moreImages": ["bishanakandi1.jpg", "bishanakandi2.jpg"],
+    "content": "A landscape of hills, waterfalls, and a crystal-clear river filled with boulders. It is especially beautiful during the monsoon.",
+    "locationUrl": "https://www.google.com/maps/place/Bichnakandi+Tourist+Spot/@25.1759252,91.8840289,788m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3750594bca5be24f:0xff59100a1d4b542b!8m2!3d25.1759252!4d91.8866038!16s%2Fg%2F11c1tyxyf7?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "June to October (Monsoon)",
+    "transport": "Boat from Gowainghat",
+    "difficulty": "Moderate",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Local spicy fish curry and bamboo-cooked rice",
+        "bn": "স্থানীয় ঝাল মাছের ঝোল এবং চুঙা পুড়া পিঠা"
+      },
+      "traditionalCrafts": {
+        "en": "Bamboo and Cane crafts",
+        "bn": "বাঁশ ও বেতের তৈরি হস্তশিল্প"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "title": "Sajek Valley",
+    "category": "Hill",
+    "district": "Rangamati",
+    "division": "Chittagong",
+    "excerpt": "The 'Queen of Hills' known for its sea of clouds.",
+    "image": "sajek.jpg",
+    "moreImages": ["sajek1.jpg", "sajek2.jpg"],
+    "content": "Located 1800 feet above sea level, Sajek offers a unique experience of touching clouds and viewing the Lushai hills of India.",
+    "locationUrl": "https://www.google.com/maps/place/Sajek+Valley/@23.3838125,92.291347,799m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3752feb9eb8c7313:0xf1d07a0cc84f174c!8m2!3d23.3838125!4d92.2939219!16s%2Fg%2F11c1vlfsy0?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "All year round (Monsoon for clouds)",
+    "transport": "Chander Gari (Jeep) from Khagrachari",
+    "difficulty": "Moderate (Mountain Road)",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Bamboo Chicken and Hill Papaya",
+        "bn": "ব্যাম্বু চিকেন এবং পাহাড়ি পেঁপে"
+      },
+      "traditionalCrafts": {
+        "en": "Tribal hand-woven blankets and bags",
+        "bn": "ক্ষুদ্র নৃগোষ্ঠীর হাতে বোনা কম্বল ও ব্যাগ"
+      }
+    }
+  },
+  {
+    "id": 27,
+    "title": "Nafakhum Waterfall",
+    "category": "Nature",
+    "district": "Bandarban",
+    "division": "Chittagong",
+    "excerpt": "One of the most powerful and beautiful waterfalls in Bangladesh.",
+    "image": "nafakhum.jpg",
+    "moreImages": ["nafakhum1.jpg", "nafakhum2.jpg"],
+    "content": "Located on the Sangu River, it requires a boat journey and trekking through deep forest and rocky terrains.",
+    "locationUrl": "https://www.google.com/maps/place/Nafakhum+Waterfall/@21.7207073,92.5241046,2335m/data=!3m1!1e3!4m6!3m5!1s0x30b279bf0e41a0bb:0xdcf8842c72dbe2d9!8m2!3d21.7203125!4d92.5341875!16s%2Fm%2F0gfh12n?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "September to November",
+    "transport": "Engine boat from Thanchi",
+    "difficulty": "High (Trekking)",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Marma traditional cuisine",
+        "bn": "মারমাদের ঐতিহ্যবাহী খাবার"
+      },
+      "traditionalCrafts": {
+        "en": "Handmade tribal waist looms",
+        "bn": "কোমর তাঁতের কাপড়"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "title": "Mahasthangarh",
+    "category": "Historical",
+    "district": "Bogura",
+    "division": "Rajshahi",
+    "excerpt": "The oldest archaeological site in Bangladesh.",
+    "image": "mahasthangarh.jpg",
+    "moreImages": ["bogura1.jpg", "bogura2.jpg"],
+    "content": "Ruins of the ancient city of Pundravardhana, containing Buddhist, Hindu, and Muslim relics across centuries.",
+    "locationUrl": "https://www.google.com/maps/place/Mahasthan+Archaeological+Museum/@24.962683,89.3415502,395m/data=!3m1!1e3!4m10!1m2!2m1!1sMahasthangarh!3m6!1s0x39fcfee89087ae65:0xb149cf750e5b69c8!8m2!3d24.962683!4d89.343932!15sCg1NYWhhc3RoYW5nYXJoWg8iDW1haGFzdGhhbmdhcmiSARVhcmNoYWVvbG9naWNhbF9tdXNldW3gAQA!16s%2Fg%2F11c67w8j16?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "October to March",
+    "transport": "Bus from Bogura town",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Bogura's famous Curd (Doi) and Katari Bhog rice",
+        "bn": "বগুড়ার বিখ্যাত দই এবং কাটারিভোগ চাল"
+      },
+      "traditionalCrafts": {
+        "en": "Clay pottery and hand-made fans",
+        "bn": "মাটির পাত্র এবং শোলার কাজ"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "title": "Birishiri (White Clay Hill)",
+    "category": "Nature",
+    "district": "Netrokona",
+    "division": "Mymensingh",
+    "excerpt": "Famous for its turquoise blue water and white china clay hills.",
+    "image": "birishiri.jpg",
+    "moreImages": ["birishiri1.jpg", "birishiri2.jpg"],
+    "content": "A serene place near the Someshwari River, offering views of the ceramic hills and Garos tribal culture.",
+    "locationUrl": "https://www.google.com/maps/place/Golden+Hills+of+White+Clay/@25.1300099,90.5971966,12615m/data=!3m1!1e3!4m10!1m2!2m1!1sBirishiri+(White+Clay+Hill)+!3m6!1s0x375709e86ccc2051:0xe07b7e16d749f488!8m2!3d25.160107!4d90.625897!15sChtCaXJpc2hpcmkgKFdoaXRlIENsYXkgSGlsbClaGyIZYmlyaXNoaXJpIHdoaXRlIGNsYXkgaGlsbJIBEnRvdXJpc3RfYXR0cmFjdGlvbpoBJENoZERTVWhOTUc5blMwVkpRMEZuVFVOdmVYSkhjbXBSUlJBQuABAPoBBAgAED8!16s%2Fg%2F11fr5hdcbk?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter (Clear water)",
+    "transport": "Bus or Train to Netrokona/Durgapur",
+    "difficulty": "Moderate",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Mymensingh's local Muktagacha Monda",
+        "bn": "মুক্তাগাছার মন্ডা"
+      },
+      "traditionalCrafts": {
+        "en": "Garo tribal handloom and bamboo crafts",
+        "bn": "গারোদের ঐতিহ্যবাহী তাঁত ও বাঁশ শিল্প"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "title": "Nijhum Dwip",
+    "category": "Nature",
+    "district": "Noakhali",
+    "division": "Chittagong",
+    "excerpt": "A small island known for its herd of Spotted Deer.",
+    "image": "nijhumdwip.jpg",
+    "moreImages": ["nijhum1.jpg", "nijhum2.jpg"],
+    "content": "A cluster of islands in the Bay of Bengal, it is a haven for migratory birds and wild deer.",
+    "locationUrl": "https://www.google.com/maps/place/Nijum+Dip/@22.0616749,90.8726116,25828m/data=!3m2!1e3!4b1!4m10!1m2!2m1!1sNijhum+Dwip!3m6!1s0x30ab6fcf3702a98d:0x6e51b77e245ef3e7!8m2!3d22.0564571!4d91.0107552!15sCgtOaWpodW0gRHdpcJIBFGFkbWluaXN0cmF0aXZlX2FyZWE04AEA!16s%2Fg%2F11nm_ylz10?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "November to February",
+    "transport": "Trawler from Hatiya",
+    "difficulty": "Moderate (Sea Journey)",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Fresh Hilsa fish and local Buffalo Ghee",
+        "bn": "তাজা ইলিশ মাছ এবং মহিষের খাঁটি ঘি"
+      },
+      "traditionalCrafts": {
+        "en": "Handmade fishing nets and mats",
+        "bn": "হাতে বোনা জাল এবং পাটি"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "title": "Puthia Temple Complex",
+    "category": "Historical",
+    "district": "Rajshahi",
+    "division": "Rajshahi",
+    "excerpt": "A collection of notable old Hindu structures in Rajshahi.",
+    "image": "puthia.jpg",
+    "moreImages": ["puthia1.jpg", "puthia2.jpg"],
+    "content": "Features the Shiva Temple, the largest in Bangladesh, and the Govinda Temple with intricate terracotta designs.",
+    "locationUrl": "https://www.google.com/maps/place/Puthia+Rajbari/@24.361949,88.8342412,793m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39fc08ee31228683:0xec7d9a92ddfc1103!8m2!3d24.361949!4d88.8368161!16s%2Fm%2F0yqj5tw?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter Season",
+    "transport": "Bus from Rajshahi city",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Rajshahi Mangoes (seasonal) and Jilapi",
+        "bn": "রাজশাহীর আম এবং রেশমি জিলাপি"
+      },
+      "traditionalCrafts": {
+        "en": "Silk sarees and terracotta plaques",
+        "bn": "রাজশাহী সিল্ক এবং পোড়ামাটির ফলক"
+      }
+    }
+  },
+  {
+    "id": 32,
+    "title": "Ratargul Swamp Forest",
+    "category": "Forest",
+    "district": "Sylhet",
+    "division": "Sylhet",
+    "excerpt": "The only freshwater swamp forest in Bangladesh.",
+    "image": "ratargul.jpg",
+    "moreImages": ["ratargul1.jpg", "ratargul2.jpg"],
+    "content": "Known as the Amazon of Bangla, visitors navigate through submerged trees by small wooden boats.",
+    "locationUrl": "https://www.google.com/maps/place/Ratargul+Swamp+Forest/@25.0141875,91.9091759,1578m/data=!3m1!1e3!4m10!1m2!2m1!1sRatargul+Swamp+Forest!3m6!1s0x375051377216199b:0x1e9a24c0202a6d39!8m2!3d25.0141875!4d91.9187031!15sChVSYXRhcmd1bCBTd2FtcCBGb3Jlc3RaFyIVcmF0YXJndWwgc3dhbXAgZm9yZXN0kgEPbmF0aW9uYWxfZm9yZXN04AEA!16s%2Fm%2F0m0l8h3?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "July to September (Monsoon)",
+    "transport": "Boat from Sylhet",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Wild citrus beef curry",
+        "bn": "সাতকরা দিয়ে গরুর মাংস"
+      },
+      "traditionalCrafts": {
+        "en": "Shital Pati (Cool Mats)",
+        "bn": "সিলেটের শীতল পাটি"
+      }
+    }
+  },
+  {
+    "id": 33,
+    "title": "Kantajew Temple",
+    "category": "Historical",
+    "district": "Dinajpur",
+    "division": "Rangpur",
+    "excerpt": "A late-medieval Hindu temple with the most stunning terracotta art.",
+    "image": "kantajew.jpg",
+    "moreImages": ["kantajew1.jpg", "kantajew2.jpg"],
+    "content": "Built in 1752, every inch of its wall is decorated with terracotta depicting myths and social life.",
+    "locationUrl": "https://www.google.com/maps/place/Kantajew+Temple/@25.7902954,88.6644701,784m/data=!3m1!1e3!4m14!1m7!3m6!1s0x39e4ae5124e7dcf9:0x863b12214bd6170b!2sKantajew+Temple!8m2!3d25.7902954!4d88.667045!16zL20vMDZnN3h5!3m5!1s0x39e4ae5124e7dcf9:0x863b12214bd6170b!8m2!3d25.7902954!4d88.667045!16zL20vMDZnN3h5?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter Season",
+    "transport": "Bus or Auto-rickshaw from Dinajpur",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Dinajpur's Litchi and Chini-gura rice",
+        "bn": "দিনাজপুরের লিচু এবং চিনিগুঁড়া চাল"
+      },
+      "traditionalCrafts": {
+        "en": "Bamboo flutes and masks",
+        "bn": "বাঁশের বাঁশি এবং কাঠের মুখোশ"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "title": "Sonargaon & Panam City",
+    "category": "Historical",
+    "district": "Narayanganj",
+    "division": "Dhaka",
+    "excerpt": "The lost city and former capital of Bengal.",
+    "image": "sonargaon.jpg",
+    "moreImages": ["panam1.jpg", "panam2.jpg"],
+    "content": "Panam City features centuries-old buildings. The site also hosts the Folk Art and Crafts Museum.",
+    "locationUrl": "https://www.google.com/maps/place/Panam+City+(%E0%A6%AA%E0%A6%BE%E0%A6%A8%E0%A6%BE%E0%A6%AE+%E0%A6%A8%E0%A6%97%E0%A6%B0)+Office/@23.656559,90.6022674,798m/data=!3m1!1e3!4m15!1m8!3m7!1s0x37544cadbef3a8df:0x6938b3ac2404e4d3!2sPanam+City,+Sonargaon!3b1!8m2!3d23.6562985!4d90.6054671!16s%2Fg%2F11c2phnnr7!3m5!1s0x37544df6137c52ed:0xab8461e4c35b2c04!8m2!3d23.6557232!4d90.6026434!16s%2Fg%2F11sqfbhd5h?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "Winter (November to February)",
+    "transport": "Bus from Dhaka",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Sweet curd and local snacks",
+        "bn": "সোনারগাঁয়ের মিষ্টি এবং মুরালি"
+      },
+      "traditionalCrafts": {
+        "en": "Jamdani weaving and clay dolls",
+        "bn": "জামদানি বয়ন এবং মাটির পুতুল"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "title": "Gura Garia (Mini Cox's Bazar)",
+    "category": "Wetland",
+    "district": "Kishoreganj",
+    "division": "Dhaka",
+    "excerpt": "A vast watery landscape with scenic roads inside the Haor.",
+    "image": "nikli.jpg",
+    "moreImages": ["nikli1.jpg", "nikli2.jpg"],
+    "content": "Famous for the Nikli Haor and the all-weather roads that look like they are floating on water during monsoon.",
+    "locationUrl": "https://www.google.com/maps/place/Nikli+Haor/@24.3299965,90.9450083,794m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3756a3545ce213eb:0x68a1dbf300ad81a2!8m2!3d24.3299965!4d90.9475832!16s%2Fg%2F11fp7vp5yr?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D",
+    "bestTime": "July to October",
+    "transport": "Train or Bus from Dhaka",
+    "difficulty": "Easy",
+    "culturalHighlights": {
+      "localFoods": {
+        "en": "Freshly caught Pabda and Tengra fish",
+        "bn": "হাওরের তাজা পাবদা ও টেংরা মাছ"
+      },
+      "traditionalCrafts": {
+        "en": "Cane stools and mats",
+        "bn": "বেতের মোড়া ও পাটি"
+      }
+    }
   }
 ]
