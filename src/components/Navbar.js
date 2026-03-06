@@ -52,9 +52,13 @@ export default function Navbar() {
                 ].map((link) => (
                     <li key={link.path}>
                         <Link to={link.path} onClick={closeMenu}>
-                            {link.label.split('').map((char, i) => (
-                                <span key={i}>{char === ' ' ? '\u00A0' : char}</span>
-                            ))}
+                            <motion.span
+                                style={{ display: 'inline-block' }}
+                                whileHover={{ y: -2, color: 'var(--accent)', scale: 1.1 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                            >
+                                {link.label}
+                            </motion.span>
                         </Link>
                     </li>
                 ))}

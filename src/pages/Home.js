@@ -7,7 +7,7 @@ import {
 import imageMap from '../utils/imageLoader';
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring as useFramerSpring } from 'framer-motion';
 import './Home.css';
 
 
@@ -72,6 +72,14 @@ const Home = () => {
     const [activeDivision, setActiveDivision] = useState('All');
     const [activeDistrict, setActiveDistrict] = useState('All');
     const [heroBgIdx, setHeroBgIdx] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    const { scrollYProgress } = useScroll();
+    const scaleX = useFramerSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     const handleDivisionChange = (div) => {
         setActiveDivision(div);
@@ -84,7 +92,16 @@ const Home = () => {
         const timer = setInterval(() => {
             setHeroBgIdx(i => (i + 1) % heroBgs.length);
         }, 5000);
-        return () => clearInterval(timer);
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 640);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => {
+            clearInterval(timer);
+            window.removeEventListener('resize', checkMobile);
+        };
     }, []);
 
 
@@ -127,6 +144,11 @@ const Home = () => {
                 />
             </Helmet>
 
+            <motion.div
+                className="scroll-progress-bar"
+                style={{ scaleX, position: 'fixed', top: 0, left: 0, right: 0, height: '4px', background: 'var(--accent)', transformOrigin: '0%', zIndex: 9999 }}
+            />
+
             <div className="home-wrapper">
 
 
@@ -135,9 +157,38 @@ const Home = () => {
                     style={{ backgroundImage: `url(${imageMap[heroBgs[heroBgIdx]]})` }}
                 >
                     <div className="hero-overlay" />
-                    <div className="hero-content">
-                        <p className="hero-tagline"><FaPlane style={{ marginRight: '8px' }} /> Your Ultimate Travel Guide</p>
-                        <h1 className="hero-title">
+                    <motion.div
+                        className="hero-content"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.15,
+                                    delayChildren: 0.2
+                                }
+                            }
+                        }}
+                    >
+                        <motion.p
+                            className="hero-tagline"
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                        >
+                            <FaPlane style={{ marginRight: '8px' }} /> Your Ultimate Travel Guide
+                        </motion.p>
+
+                        <motion.h1
+                            className="hero-title"
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                        >
                             <TypeAnimation
                                 sequence={[
                                     'Discover the Beauty of',
@@ -152,15 +203,27 @@ const Home = () => {
                                 repeat={Infinity}
                             /><br />
                             <span className="hero-highlight">Bangladesh</span>
-                        </h1>
-                        <p className="hero-subtitle">
+                        </motion.h1>
+
+                        <motion.p
+                            className="hero-subtitle"
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                        >
                             Explore breathtaking landscapes, ancient history, pristine beaches,
                             and vibrant culture across one of South Asia's most captivating destinations.
-                        </p>
+                        </motion.p>
 
-
-
-                        <div className="hero-search-bar">
+                        <motion.div
+                            className="hero-search-bar"
+                            variants={{
+                                hidden: { opacity: 0, scale: 0.8 },
+                                visible: { opacity: 1, scale: 1 }
+                            }}
+                            whileFocus={{ scale: 1.05 }}
+                        >
                             <span className="search-icon"><FaSearch /></span>
                             <input
                                 id="hero-search"
@@ -180,11 +243,15 @@ const Home = () => {
                                     <FaTimes />
                                 </button>
                             )}
-                        </div>
+                        </motion.div>
 
-
-
-                        <div className="hero-stats">
+                        <motion.div
+                            className="hero-stats"
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                        >
                             <div className="hero-stat">
                                 <strong>
                                     <CountUp end={touristSpots.length > 0 ? touristSpots.length : 20} duration={3} />+
@@ -205,8 +272,8 @@ const Home = () => {
                                 </strong>
                                 <span>Divisions</span>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
 
 
@@ -218,7 +285,13 @@ const Home = () => {
 
 
 
-                <div className="filter-section">
+                <motion.div
+                    className="filter-section"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <h2 className="section-title">
                         {searchQuery
                             ? `Results for "${searchQuery}"`
@@ -267,7 +340,7 @@ const Home = () => {
                                 : `Showing ${filteredSpots.length} destination${filteredSpots.length !== 1 ? 's' : ''}`}
                         </p>
                     )}
-                </div>
+                </motion.div>
 
 
 
@@ -286,48 +359,56 @@ const Home = () => {
                             </button>
                         </div>
                     ) : (
-                        filteredSpots.map((spot, index) => (
-                            <motion.div
-                                key={spot.id}
-                                className="spot-card"
-                                initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.6, type: 'spring', bounce: 0.3 }}
-                                whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5, zIndex: 10, boxShadow: '0 25px 50px -12px rgba(45, 137, 229, 0.25)' }}
-                            >
-                                <div className="spot-image-wrapper">
-                                    <img
-                                        src={spot.image.startsWith('http') ? spot.image : (imageMap[spot.image] || '')}
-                                        alt={spot.title}
-                                        className="spot-image"
-                                        loading="lazy"
-                                    />
-                                    {(spot.district || spot.category) && (
-                                        <span
-                                            className="category-badge"
-                                            style={{
-                                                backgroundColor:
-                                                    CATEGORY_COLORS[spot.category] || '#2d89e5',
-                                            }}
-                                        >
-                                            {spot.district ? spot.district : spot.category}
-                                        </span>
-                                    )}
-                                    <div className="spot-image-overlay" />
-                                </div>
-                                <div className="spot-content">
-                                    <h2 className="spot-title">{spot.title}</h2>
-                                    <p className="spot-description">{spot.excerpt}</p>
-                                    <Link to={`/blog/${spot.id}`} className="read-more-link">
-                                        <FracturedText text="Read More →" />
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        ))
+                        filteredSpots.map((spot, index) => {
+                            // Calculate dynamic X offset for mobile alternating animation
+                            let initialX = 0;
+                            if (isMobile) {
+                                initialX = index % 2 === 0 ? -100 : 100;
+                            }
+
+                            return (
+                                <motion.div
+                                    key={spot.id}
+                                    className="spot-card"
+                                    initial={{ opacity: 0, y: isMobile ? 0 : 50, x: initialX, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.6, type: 'spring', bounce: 0.3 }}
+                                    whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5, zIndex: 10, boxShadow: '0 25px 50px -12px rgba(45, 137, 229, 0.25)' }}
+                                >
+                                    <div className="spot-image-wrapper">
+                                        <img
+                                            src={spot.image.startsWith('http') ? spot.image : (imageMap[spot.image] || '')}
+                                            alt={spot.title}
+                                            className="spot-image"
+                                            loading="lazy"
+                                        />
+                                        {(spot.district || spot.category) && (
+                                            <span
+                                                className="category-badge"
+                                                style={{
+                                                    backgroundColor:
+                                                        CATEGORY_COLORS[spot.category] || '#2d89e5',
+                                                }}
+                                            >
+                                                {spot.district ? spot.district : spot.category}
+                                            </span>
+                                        )}
+                                        <div className="spot-image-overlay" />
+                                    </div>
+                                    <div className="spot-content">
+                                        <h2 className="spot-title">{spot.title}</h2>
+                                        <p className="spot-description">{spot.excerpt}</p>
+                                        <Link to={`/blog/${spot.id}`} className="read-more-link">
+                                            <FracturedText text="Read More →" />
+                                        </Link>
+                                    </div>
+                                </motion.div>
+                            );
+                        })
                     )}
                 </div>
-            </div>
+            </div >
         </>
     );
 };

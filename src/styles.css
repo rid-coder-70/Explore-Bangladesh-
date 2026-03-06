@@ -2,26 +2,26 @@
    CSS CUSTOM PROPERTIES (Light & Dark Themes)
    ============================================= */
 :root {
-  --bg-color: #e8edf5;
-  --card-bg: #ffffff;
-  --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --text-color: #1a202c;
-  --text-muted: #555;
-  --navbar-bg: linear-gradient(135deg, #1a6fc4 0%, #2d89e5 100%);
-  --navbar-text: #ffffff;
-  --footer-bg: #1a202c;
-  --footer-text: #e2e8f0;
-  --accent: #2d89e5;
-  --accent-hover: #1b5fbd;
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --text-muted: #64748b;
+  --navbar-bg: rgba(255, 255, 255, 0.82);
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
   --border-color: #e2e8f0;
-  --input-bg: #ffffff;
-  --hero-overlay: rgba(0, 0, 0, 0.52);
-  --skeleton-base: #e0e7ef;
-  --skeleton-shine: #f0f4fb;
-  --badge-text: #fff;
-  --filter-bg: #f0f4fb;
-  --filter-active-bg: #2d89e5;
-  --filter-active-text: #fff;
+  --hero-overlay: rgba(15, 23, 42, 0.45);
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --skeleton-base: #e2e8f0;
+  --skeleton-shine: #f8fafc;
+  --navbar-pill-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Transition timings */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 [data-theme="dark"] {
