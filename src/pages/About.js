@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaBullseye, FaCamera, FaGlobe, FaMap, FaUmbrellaBeach, FaTree, FaLeaf, FaWater, FaMountain, FaHistory } from "react-icons/fa";
 import styles from "./About.module.css";
+import { TypeAnimation } from 'react-type-animation';
+import CountUp from 'react-countup';
 
 import destinations from "../data/aboutDestinations.json";
 
@@ -24,7 +26,21 @@ export default function About() {
 
       <div className={styles.about}>
         <div className={styles.aboutHero}>
-          <h1>About Explore Bangladesh</h1>
+          <h1>
+            <TypeAnimation
+              sequence={[
+                'About Explore Bangladesh',
+                2000,
+                'Discover Our Heritage',
+                2000,
+                'Experience The Culture',
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
           <p>
             Your ultimate travel guide to the hidden gems, iconic landscapes,
             and rich cultural heritage of the Land of Rivers.
@@ -58,7 +74,10 @@ export default function About() {
           </div>
         </div>
 
-        <h2 className={styles.destHeading}><FaMap style={{ marginRight: '10px' }} /> 20 Popular Destinations</h2>
+        <h2 className={styles.destHeading}>
+          <FaMap style={{ marginRight: '10px' }} />
+          <CountUp end={destinations.length} duration={3} /> Popular Destinations
+        </h2>
         <div className={styles.destGrid}>
           {destinations.map((dest, i) => {
             const cat = CATEGORY_MAP[dest.category] || { color: '#2d89e5', icon: <FaMap /> };

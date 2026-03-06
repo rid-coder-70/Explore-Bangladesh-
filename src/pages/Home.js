@@ -6,6 +6,8 @@ import {
     FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaArrowDown
 } from 'react-icons/fa';
 import imageMap from '../utils/imageLoader';
+import { TypeAnimation } from 'react-type-animation';
+import CountUp from 'react-countup';
 import './Home.css';
 
 
@@ -121,7 +123,19 @@ const Home = () => {
                     <div className="hero-content">
                         <p className="hero-tagline"><FaPlane style={{ marginRight: '8px' }} /> Your Ultimate Travel Guide</p>
                         <h1 className="hero-title">
-                            Discover the Beauty of<br />
+                            <TypeAnimation
+                                sequence={[
+                                    'Discover the Beauty of',
+                                    1500,
+                                    'Explore the Wonders of',
+                                    1500,
+                                    'Experience the Magic of',
+                                    1500,
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                                repeat={Infinity}
+                            /><br />
                             <span className="hero-highlight">Bangladesh</span>
                         </h1>
                         <p className="hero-subtitle">
@@ -157,17 +171,23 @@ const Home = () => {
 
                         <div className="hero-stats">
                             <div className="hero-stat">
-                                <strong>20+</strong>
+                                <strong>
+                                    <CountUp end={touristSpots.length > 0 ? touristSpots.length : 20} duration={3} />+
+                                </strong>
                                 <span>Destinations</span>
                             </div>
                             <div className="hero-stat-divider" />
                             <div className="hero-stat">
-                                <strong>100+</strong>
+                                <strong>
+                                    <CountUp end={touristSpots.length > 0 ? touristSpots.length * 5 : 100} duration={3} />+
+                                </strong>
                                 <span>Photos</span>
                             </div>
                             <div className="hero-stat-divider" />
                             <div className="hero-stat">
-                                <strong>6</strong>
+                                <strong>
+                                    <CountUp end={CATEGORIES.length - 1} duration={3} />
+                                </strong>
                                 <span>Categories</span>
                             </div>
                         </div>
