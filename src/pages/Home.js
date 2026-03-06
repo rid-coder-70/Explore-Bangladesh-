@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
     FaPlane, FaSearch, FaTimes, FaGlobe, FaUmbrellaBeach,
-    FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaArrowDown
+    FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaArrowDown, FaMapMarkerAlt
 } from 'react-icons/fa';
 import imageMap from '../utils/imageLoader';
 import { TypeAnimation } from 'react-type-animation';
@@ -41,14 +41,16 @@ function FracturedText({ text }) {
 
 
 
-const CATEGORIES = [
+const DIVISIONS = [
     { label: 'All', icon: <FaGlobe /> },
-    { label: 'Beach', icon: <FaUmbrellaBeach /> },
-    { label: 'Forest', icon: <FaTree /> },
-    { label: 'Hill', icon: <FaMountain /> },
-    { label: 'Nature', icon: <FaLeaf /> },
-    { label: 'Historical', icon: <FaHistory /> },
-    { label: 'Wetland', icon: <FaWater /> },
+    { label: 'Dhaka', icon: <FaMapMarkerAlt /> },
+    { label: 'Chittagong', icon: <FaMapMarkerAlt /> },
+    { label: 'Sylhet', icon: <FaMapMarkerAlt /> },
+    { label: 'Khulna', icon: <FaMapMarkerAlt /> },
+    { label: 'Rajshahi', icon: <FaMapMarkerAlt /> },
+    { label: 'Barisal', icon: <FaMapMarkerAlt /> },
+    { label: 'Rangpur', icon: <FaMapMarkerAlt /> },
+    { label: 'Mymensingh', icon: <FaMapMarkerAlt /> }
 ];
 
 const CATEGORY_COLORS = {
@@ -68,8 +70,14 @@ const Home = () => {
     const [touristSpots, setTouristSpots] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
-    const [activeCategory, setActiveCategory] = useState('All');
+    const [activeDivision, setActiveDivision] = useState('All');
+    const [activeDistrict, setActiveDistrict] = useState('All');
     const [heroBgIdx, setHeroBgIdx] = useState(0);
+
+    const handleDivisionChange = (div) => {
+        setActiveDivision(div);
+        setActiveDistrict('All');
+    };
 
 
 
@@ -96,12 +104,19 @@ const Home = () => {
 
 
     const filteredSpots = touristSpots.filter(spot => {
-        const matchCat = activeCategory === 'All' || spot.category === activeCategory;
+        const matchDiv = activeDivision === 'All' || spot.division === activeDivision;
+        const matchDist = activeDistrict === 'All' || (spot.district && spot.district.includes(activeDistrict));
         const matchSearch =
             spot.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            spot.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchCat && matchSearch;
+            spot.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (spot.division && spot.division.toLowerCase().includes(searchQuery.toLowerCase())) ||
+            (spot.district && spot.district.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchDiv && matchDist && matchSearch;
     });
+
+    const districtsForDivision = activeDivision === 'All'
+        ? []
+        : [...new Set(touristSpots.filter(s => s.division === activeDivision).map(s => s.district).flatMap(d => d ? d.split('/') : []))].sort();
 
     return (
         <>
@@ -187,9 +202,9 @@ const Home = () => {
                             <div className="hero-stat-divider" />
                             <div className="hero-stat">
                                 <strong>
-                                    <CountUp end={CATEGORIES.length - 1} duration={3} />
+                                    <CountUp end={DIVISIONS.length - 1} duration={3} />
                                 </strong>
-                                <span>Categories</span>
+                                <span>Divisions</span>
                             </div>
                         </div>
                     </div>
@@ -210,19 +225,41 @@ const Home = () => {
                             ? `Results for "${searchQuery}"`
                             : 'Explore Destinations'}
                     </h2>
-                    <div className="category-filters" role="group" aria-label="Filter by category">
-                        {CATEGORIES.map(cat => (
+                    <div className="category-filters" role="group" aria-label="Filter by division">
+                        {DIVISIONS.map(div => (
                             <button
-                                key={cat.label}
-                                id={`filter-${cat.label.toLowerCase()}`}
-                                className={`filter-btn${activeCategory === cat.label ? ' active' : ''}`}
-                                onClick={() => setActiveCategory(cat.label)}
+                                key={div.label}
+                                id={`filter-${div.label.toLowerCase()}`}
+                                className={`filter-btn${activeDivision === div.label ? ' active' : ''}`}
+                                onClick={() => handleDivisionChange(div.label)}
                             >
-                                <span className="filter-emoji">{cat.icon}</span>
-                                {cat.label}
+                                <span className="filter-emoji">{div.icon}</span>
+                                {div.label}
                             </button>
                         ))}
                     </div>
+
+                    {activeDivision !== 'All' && districtsForDivision.length > 0 && (
+                        <div className="category-filters district-filters" style={{ marginTop: '10px' }} role="group" aria-label="Filter by district">
+                            <button
+                                className={`filter-btn district-btn${activeDistrict === 'All' ? ' active' : ''}`}
+                                onClick={() => setActiveDistrict('All')}
+                                style={{ fontSize: '0.8rem', padding: '0.4rem 0.9rem' }}
+                            >
+                                All Districts
+                            </button>
+                            {districtsForDivision.map(dist => (
+                                <button
+                                    key={dist}
+                                    className={`filter-btn district-btn${activeDistrict === dist ? ' active' : ''}`}
+                                    onClick={() => setActiveDistrict(dist)}
+                                    style={{ fontSize: '0.8rem', padding: '0.4rem 0.9rem' }}
+                                >
+                                    {dist}
+                                </button>
+                            ))}
+                        </div>
+                    )}
 
                     {!loading && (
                         <p className="results-count">
@@ -244,7 +281,7 @@ const Home = () => {
                             <p>No destinations found</p>
                             <button
                                 className="no-results-reset"
-                                onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
+                                onClick={() => { setSearchQuery(''); handleDivisionChange('All'); }}
                             >
                                 Reset Filters
                             </button>
@@ -266,7 +303,7 @@ const Home = () => {
                                         className="spot-image"
                                         loading="lazy"
                                     />
-                                    {spot.category && (
+                                    {(spot.district || spot.category) && (
                                         <span
                                             className="category-badge"
                                             style={{
@@ -274,7 +311,7 @@ const Home = () => {
                                                     CATEGORY_COLORS[spot.category] || '#2d89e5',
                                             }}
                                         >
-                                            {spot.category}
+                                            {spot.district ? spot.district : spot.category}
                                         </span>
                                     )}
                                     <div className="spot-image-overlay" />

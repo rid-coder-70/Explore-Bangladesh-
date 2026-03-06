@@ -164,13 +164,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem 2.5rem;
+  padding: 0.6rem 1.8rem;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
@@ -183,14 +183,14 @@
 }
 
 .hero-stat strong {
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #ffd700;
   line-height: 1;
 }
 
 .hero-stat span {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.75);
@@ -306,11 +306,11 @@
    SPOT CARD GRID
    ============================================= */
 .spot-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 1.5rem 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.6rem;
 }
 
@@ -525,6 +525,12 @@
 /* =============================================
    RESPONSIVE
    ============================================= */
+@media (max-width: 1200px) {
+  .spot-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .spot-container {
     grid-template-columns: repeat(2, 1fr);
