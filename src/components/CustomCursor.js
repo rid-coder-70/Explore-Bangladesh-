@@ -4,12 +4,9 @@ import "./CustomCursor.css";
 
 const CustomCursor = () => {
     const [isHovering, setIsHovering] = useState(false);
-
-    // Directly track raw mouse values outside of React render cycle
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
-    // Apply silky smooth spring physics to the tracking
     const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
     const cursorXSpring = useSpring(cursorX, springConfig);
     const cursorYSpring = useSpring(cursorY, springConfig);
@@ -21,7 +18,6 @@ const CustomCursor = () => {
         };
 
         const handleMouseOver = (e) => {
-            // Extensive check for anything clickable / interactive
             if (
                 e.target.tagName.toLowerCase() === 'button' ||
                 e.target.tagName.toLowerCase() === 'a' ||
@@ -47,13 +43,10 @@ const CustomCursor = () => {
 
     return (
         <>
-            {/* Tiny solid dot directly tracks mouse instantly */}
             <motion.div
                 className="cursor-dot"
                 style={{ x: cursorX, y: cursorY }}
             />
-
-            {/* Aura ring tracks smoothly behind */}
             <motion.div
                 className="cursor-ring"
                 style={{ x: cursorXSpring, y: cursorYSpring }}

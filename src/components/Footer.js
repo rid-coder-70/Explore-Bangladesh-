@@ -24,11 +24,9 @@ export default function Footer() {
 
 
 
-        <div className="footer-section footer-brand">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-            <h3 style={{ margin: 0 }}>Explore Bangladesh</h3>
-          </div>
-          <p>
+        <div className="footer-section footer-brand-container">
+          <h3 className="footer-title-main">Explore Bangladesh</h3>
+          <p className="footer-description">
             Your ultimate guide to the most iconic, breathtaking, and culturally rich
             destinations across Bangladesh.
           </p>

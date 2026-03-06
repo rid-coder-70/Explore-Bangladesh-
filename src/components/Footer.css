@@ -4,6 +4,7 @@
   color: var(--footer-text);
   padding: 3rem 2rem 0;
   transition: background 0.3s, color 0.3s;
+  border-top: 1px solid var(--footer-border);
 }
 
 .footer-content {
@@ -13,35 +14,42 @@
   grid-template-columns: 1.5fr 1fr 1.4fr 1fr;
   gap: 2rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--footer-border);
 }
 
-/* Brand column */
-.footer-brand h3 {
-  font-size: 1.2rem;
+/* Brand column refinement */
+.footer-brand-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-title-main {
+  font-size: 1.4rem;
   font-weight: 800;
-  color: #fff;
-  margin-bottom: 0.7rem;
+  color: var(--footer-title) !important;
+  margin: 0;
 }
 
-.footer-brand p {
-  font-size: 0.84rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.55);
+.footer-description {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--footer-text) !important;
+  max-width: 320px;
 }
 
 /* Regular sections */
-.footer-section h3 {
+.footer-section h3,
+.footer-brand h3 {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--footer-title);
   margin-bottom: 0.9rem;
   letter-spacing: 0.3px;
 }
 
 .footer-section p {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 0.7rem;
   line-height: 1.5;
 }
@@ -55,13 +63,13 @@
 
 .footer-section ul li a {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-link);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .footer-section ul li a:hover {
-  color: #ffd700;
+  color: var(--footer-link-hover);
 }
 
 /* Newsletter */
@@ -77,13 +85,13 @@
   min-width: 0;
   padding: 0.55rem 0.9rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.07);
-  color: #fff;
+  border: 1px solid var(--footer-border);
+  background: var(--card-bg);
+  color: var(--text-color);
   font-size: 0.83rem;
   outline: none;
   font-family: inherit;
-  transition: border 0.2s;
+  transition: all 0.2s;
 }
 
 .newsletter-form input::placeholder {
@@ -169,11 +177,12 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--footer-text);
+  opacity: 0.6;
 }
 
 .footer-credit {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--footer-text);
 }
 
 /* Responsive */
