@@ -1,9 +1,11 @@
-const images = require.context('../assets/images', false, /\.(png|jpe?g|svg)$/);
+// Use Vite's import.meta.glob for dynamic asset loading
+const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const imageMap = {};
-images.keys().forEach((item) => {
-    const key = item.replace('./', '');
-    imageMap[key] = images(item);
+Object.keys(images).forEach((path) => {
+    // Extract filename from path (e.g., "../assets/images/image.jpg" -> "image.jpg")
+    const key = path.split('/').pop();
+    imageMap[key] = images[path].default;
 });
 
 export default imageMap;

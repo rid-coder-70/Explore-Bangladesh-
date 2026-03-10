@@ -45,7 +45,7 @@ Ensure you have Node.js (v16 or higher) installed.
 
 3. **Start the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. **Build for production:**
@@ -61,7 +61,9 @@ The application uses local JSON files to serve as a fast, robust mockup API for 
 *Note: You can easily swap these out to fetch from a live backend (like MongoDB/Express or Firebase) using standard React `useEffect` fetch calls.*
 
 ## Screenshots
-*( Screenshots - later update me )*
+
+![Home Page](public/home.jpg)
+![Destination Explorer](public/Tourist_Destination.jpg)
 
 ## Live Demo
 Check out the live application hosted on Vercel:
@@ -80,9 +82,10 @@ Explore-Bangladesh/
 │   ├── data/               # Local JSON API data (posts.json, etc.)
 │   ├── pages/              # Page components (Home, About, BlogDetail, etc.)
 │   ├── utils/              # Helper functions (imageLoader.js)
-│   ├── App.js              # Main routing and provider wrap
-│   ├── index.js            # React DOM rendering
+│   ├── App.jsx             # Main routing and provider wrap
+│   ├── index.jsx           # React DOM rendering
 │   └── styles.css          # Core CSS variables and global styling
+├── vite.config.js          # Vite configuration
 ├── vercel.json             # Vercel deployment configuration
 └── package.json            # Project dependencies and scripts
 ```

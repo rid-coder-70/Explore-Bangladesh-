@@ -14,12 +14,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <HelmetProvider>
       <DarkModeProvider>
         <Router>
+          <ScrollToTop />
           <CustomCursor />
           <Toaster position="top-center" reverseOrder={false} />
           <Navbar />
