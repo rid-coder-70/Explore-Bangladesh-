@@ -58,7 +58,6 @@ The application uses local JSON files to serve as a fast, robust mockup API for 
 - **Posts Data:** `src/data/posts.json` (Contains all tourist spots, images, descriptions, map links, and nested details).
 - **About Data:** `src/data/aboutDestinations.json` (Contains summary destinations for the About Page).
 
-*Note: You can easily swap these out to fetch from a live backend (like MongoDB/Express or Firebase) using standard React `useEffect` fetch calls.*
 
 ## Screenshots
 
