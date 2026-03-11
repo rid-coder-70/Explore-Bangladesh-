@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Vercel CI/CD
 
 on:
   push:
@@ -10,12 +10,13 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  quality-check:
+
+  quality:
     name: Lint & Test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -27,20 +28,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run unit tests
-        run: npm test
+      - name: Run ESLint
+        run: npm run lint --if-present
 
-  build-verification:
+      - name: Run unit tests
+        run: npm test --if-present
+
+
+  build:
     name: Build Verification
-    needs: quality-check
+    needs: quality
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
@@ -48,12 +51,39 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Attempt Production Build
+      - name: Build Project
         run: npm run build
 
-  deploy:
-    name: Deploy to Production
-    needs: [quality-check, build-verification]
+
+  preview-deploy:
+    name: Deploy Preview (PR)
+    needs: build
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel Environment
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Preview
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+
+  production-deploy:
+    name: Deploy Production
+    needs: build
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     runs-on: ubuntu-latest
 
@@ -62,22 +92,16 @@ jobs:
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
+      - uses: actions/checkout@v4
 
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
 
-      - name: Pull Vercel Environment Information
+      - name: Pull Production Environment
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build Project Artifacts
+      - name: Build Project
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Project Artifacts to Vercel
+      - name: Deploy Production
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
