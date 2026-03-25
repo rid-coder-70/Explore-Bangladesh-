@@ -17,7 +17,7 @@ env:
 jobs:
 
   quality:
-    name: 🔍 Quality Assurance (Lint & Test)
+    name: Quality Assurance (Lint & Test)
     runs-on: ubuntu-latest
 
     steps:
