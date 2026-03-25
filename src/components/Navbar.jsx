@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from '../assets/images/logo3.png';
+import logo from '../assets/images/ghuri-logo.svg';
 import { useDarkMode } from '../context/DarkModeContext';
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,10 +55,9 @@ export default function Navbar() {
             <div className="navbar-brand">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Link to="/" onClick={closeMenu} className="brand-link">
-                        <img src={logo} alt="Explore Bangladesh Logo" className="logo-img" />
+                        <img src={logo} alt="BanglaGo Logo" className="logo-img" />
                         <div className="logo_bounce">
-                            <span className="text-full">Explore Bangladesh</span>
-                            <span className="text-mobile">Explore BD</span>
+                            <span className="text-full">BanglaGo</span>
                         </div>
                     </Link>
                 </motion.div>

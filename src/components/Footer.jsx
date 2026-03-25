@@ -25,7 +25,7 @@ export default function Footer() {
 
 
         <div className="footer-section footer-brand-container">
-          <h3 className="footer-title-main">Explore Bangladesh</h3>
+          <h3 className="footer-title-main">BanglaGo</h3>
           <p className="footer-description">
             Your ultimate guide to the most iconic, breathtaking, and culturally rich
             destinations across Bangladesh.
@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 Explore Bangladesh. All rights reserved.</p>
+        <p>© 2026 BanglaGo. All rights reserved.</p>
         <p className="footer-credit">Made with <FaHeart style={{ color: '#ff4d4d' }} /> for Bangladesh</p>
       </div>
     </footer>

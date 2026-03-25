@@ -1,4 +1,4 @@
-# Explore Bangladesh - The Ultimate Travel Portal
+# BanglaGo - The Ultimate Travel Portal
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://explore-bangladesh.vercel.app/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ## Project Overview
-Explore Bangladesh is a modern, high-performance web application built with **React** that showcases the breathtaking tourist destinations of Bangladesh. It provides travelers and explorers with detailed information, high-quality image galleries, and practical navigation tools to discover the hidden gems of the country.
+BanglaGo is a modern, high-performance web application built with **React** that showcases the breathtaking tourist destinations of Bangladesh. It provides travelers and explorers with detailed information, high-quality image galleries, and practical navigation tools to discover the hidden gems of the country.
 
 ## Tech Stack
 - **Frontend Core**: [React.js](https://reactjs.org/) (Hooks & Functional Components)
@@ -66,7 +66,7 @@ The application uses local JSON files to serve as a fast, robust mockup API for 
 
 ## Live Demo
 Check out the live application hosted on Vercel:
-**[Explore Bangladesh Live Demo](https://explore-bangladesh.vercel.app/)**
+**[BanglaGo Live Demo](https://explore-bangladesh.vercel.app/)**
 
 ---
 

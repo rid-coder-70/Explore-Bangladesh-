@@ -8,7 +8,7 @@ export default function NotFound() {
     return (
         <>
             <Helmet>
-                <title>404 — Page Not Found | Explore Bangladesh</title>
+                <title>404 — Page Not Found | BanglaGo</title>
             </Helmet>
             <div className="nf-wrapper">
                 <div className="nf-box">

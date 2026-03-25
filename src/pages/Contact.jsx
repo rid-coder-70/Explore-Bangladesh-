@@ -62,8 +62,8 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Explore Bangladesh</title>
-        <meta name="description" content="Get in touch with Explore Bangladesh. Send us your travel questions, feedback or suggestions." />
+        <title>Contact Us | BanglaGo</title>
+        <meta name="description" content="Get in touch with BanglaGo. Send us your travel questions, feedback or suggestions." />
       </Helmet>
 
       <div className="contact-wrapper">

@@ -56,10 +56,12 @@ const SpotCard = ({ spot, index, isMobile }) => {
       whileHover={
         !isMobile
           ? {
-              scale: 1.04,
+              scale: 1.05,
+              rotateY: 5,
+              rotateX: 5,
+              zIndex: 10,
               transition: { duration: 0.25 },
-              boxShadow:
-                "0 25px 50px -12px rgba(45,137,229,0.25)",
+              boxShadow: "0 25px 50px -12px rgba(45, 137, 229, 0.25)",
             }
           : {}
       }
@@ -81,8 +83,7 @@ const SpotCard = ({ spot, index, isMobile }) => {
           <span
             className="category-badge"
             style={{
-              backgroundColor:
-                CATEGORY_COLORS[spot.category] || "#2d89e5",
+              backgroundColor: CATEGORY_COLORS[spot.category] || "#2d89e5",
             }}
           >
             {spot.district || spot.category}
@@ -104,6 +105,7 @@ const SpotCard = ({ spot, index, isMobile }) => {
     </motion.div>
   );
 };
+
 
 
 export const SkeletonCard = () => {

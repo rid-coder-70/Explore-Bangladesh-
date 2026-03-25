@@ -97,10 +97,10 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Explore Bangladesh — Discover Amazing Destinations</title>
+                <title>BanglaGo — Discover Amazing Destinations</title>
                 <meta
                     name="description"
-                    content="Explore the most iconic tourist destinations of Bangladesh — beaches, forests, hills, historical sites and more."
+                    content="Explore the most iconic tourist destinations of BanglaGo — beaches, forests, hills, historical sites and more."
                 />
             </Helmet>
 

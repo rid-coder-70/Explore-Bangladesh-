@@ -323,15 +323,11 @@ a {
 
 /* Logo image */
 .logo-img {
-  height: 46px;
+  height: 40px;
   width: auto;
-  border-radius: 8px;
   margin-right: 12px;
-  background-color: #ffffff;
-  padding: 2px;
   object-fit: contain;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
@@ -376,16 +372,17 @@ a {
     top: 10px;
   }
 
-  .text-full {
-    display: none;
+  .logo-img {
+    height: 32px;
+    margin-right: 8px;
   }
 
-  .text-mobile {
+  .text-full {
     display: inline-block;
   }
 
   .logo_bounce {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .menu-icon {

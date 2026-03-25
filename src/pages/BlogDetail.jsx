@@ -105,7 +105,7 @@ const BlogDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{blog.title} | Explore Bangladesh</title>
+        <title>{blog.title} | BanglaGo</title>
         <meta name="description" content={blog.excerpt} />
       </Helmet>
 

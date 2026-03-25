@@ -20,8 +20,8 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About | Explore Bangladesh</title>
-        <meta name="description" content="Learn about Explore Bangladesh — your guide to the most beautiful tourist destinations in Bangladesh." />
+        <title>About | BanglaGo</title>
+        <meta name="description" content="Learn about BanglaGo — your guide to the most beautiful tourist destinations in Bangladesh." />
       </Helmet>
 
       <div className={styles.about}>
@@ -29,7 +29,7 @@ export default function About() {
           <h1>
             <TypeAnimation
               sequence={[
-                'About Explore Bangladesh',
+                'About BanglaGo',
                 2000,
                 'Discover Our Heritage',
                 2000,

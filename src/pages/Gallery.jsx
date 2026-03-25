@@ -61,7 +61,7 @@ export default function Gallery() {
     return (
         <>
             <Helmet>
-                <title>Photo Gallery | Explore Bangladesh</title>
+                <title>Photo Gallery | BanglaGo</title>
                 <meta
                     name="description"
                     content="Browse stunning photos of Bangladesh's most beautiful tourist destinations."

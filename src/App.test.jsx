@@ -18,7 +18,7 @@ describe('Navbar Component', () => {
     );
     
     // Check if the brand name is present
-    const brandElement = screen.getByText(/Explore Bangladesh/i);
+    const brandElement = screen.getByText(/BanglaGo/i);
     expect(brandElement).toBeInTheDocument();
   });
 
