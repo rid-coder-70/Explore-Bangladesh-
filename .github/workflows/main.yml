@@ -1,10 +1,15 @@
-name: Vercel CI/CD
+name: BanglaGo Deployment Pipeline 🚀
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -12,7 +17,7 @@ env:
 jobs:
 
   quality:
-    name: Lint & Test
+    name: 🔍 Quality Assurance (Lint & Test)
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +41,7 @@ jobs:
 
 
   build:
-    name: Build Verification
+    name: 🏗️ Build Verification
     needs: quality
     runs-on: ubuntu-latest
 
@@ -56,7 +61,7 @@ jobs:
 
 
   preview-deploy:
-    name: Deploy Preview (PR)
+    name: 🚀 Deploy Preview (PR)
     needs: build
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
@@ -82,9 +87,9 @@ jobs:
 
 
   production-deploy:
-    name: Deploy Production
+    name: 🚢 Deploy Production
     needs: build
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     env:
