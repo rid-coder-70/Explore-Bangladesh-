@@ -19,7 +19,7 @@
 
 .blog-body {
   background: #ffffff;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 32px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -35,8 +35,8 @@
 /* 🏢 Content Grid Layout */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
@@ -62,7 +62,7 @@
 /* 🔙 Floating Back Button */
 .floating-back {
   position: fixed;
-  top: 2rem;
+  top: 100px;
   left: 2rem;
   width: 45px;
   height: 45px;
@@ -236,10 +236,10 @@
 /* 🖋️ Refined Drop Cap */
 .first-para::first-letter {
   float: left;
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 900;
-  line-height: 1;
-  margin: 0.1rem 0.75rem 0 0;
+  line-height: 0.8;
+  margin: 0.1rem 0.5rem 0 0;
   color: #2563eb;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
@@ -264,9 +264,9 @@
 }
 
 [data-theme='dark'] .essentials-card {
-  background: #1e293b;
+  background: #0f172a;
   border-color: #334155;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .essentials-card h4 {
@@ -326,9 +326,9 @@
 }
 
 [data-theme='dark'] .cultural-card {
-  background: #1e293b;
+  background: #0f172a;
   border-color: #334155;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cultural-card h4 {
@@ -833,6 +833,13 @@
 @media (max-width: 1200px) {
   .blog-container {
     max-width: 95%;
+  }
+  .blog-body {
+    padding: 2.5rem;
+  }
+  .content-grid {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2.5rem;
   }
 }
 

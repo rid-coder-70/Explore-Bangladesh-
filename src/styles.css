@@ -103,6 +103,23 @@ a {
   /* Soft border for floating effect */
 }
 
+/* Glassmorphism scroll effect */
+.nav-scrolled {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  padding: 0.4rem 2rem;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .nav-scrolled {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* Logo brand styling */
 .brand-link {
   display: flex;
@@ -370,6 +387,11 @@ a {
     margin: 10px 15px;
     border-radius: 50px;
     top: 10px;
+  }
+
+  .nav-scrolled {
+    padding: 0.4rem 1.2rem;
+    transform: translateY(-2px);
   }
 
   .logo-img {

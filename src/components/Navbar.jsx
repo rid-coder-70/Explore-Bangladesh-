@@ -50,7 +50,8 @@ export default function Navbar() {
             className={`navbar ${scrolled ? 'nav-scrolled' : ''}`}
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20 }}
+            layout
         >
             <div className="navbar-brand">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
