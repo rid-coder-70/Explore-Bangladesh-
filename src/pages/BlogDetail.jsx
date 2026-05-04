@@ -12,7 +12,8 @@ import {
   TravelerEssentials, 
   CulturalHighlights, 
   VisualJourney, 
-  VisitActions 
+  VisitActions,
+  LiveWeather
 } from "../components/common/BlogComponents";
 import "./BlogDetail.css";
 import importImages from "../utils/imageLoader";
@@ -211,6 +212,7 @@ const BlogDetail = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
+                <LiveWeather district={blog.district} />
                 <TravelerEssentials blog={blog} />
                 <CulturalHighlights highlights={blog.culturalHighlights} />
               </motion.aside>

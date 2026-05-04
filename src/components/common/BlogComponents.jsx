@@ -1,12 +1,83 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Slider from "react-slick";
 import { 
     FaMapMarkerAlt, FaCalendarAlt, FaBus, FaHiking, 
     FaUtensils, FaPalette, FaImages, FaShareAlt, 
-    FaDirections, FaWhatsapp, FaLink 
+    FaDirections, FaWhatsapp, FaLink, FaCloudSun, FaWind
 } from "react-icons/fa";
 import imageMap from '../../utils/imageLoader';
+import { getWeatherCodeData } from '../../utils/weatherUtils';
+
+export const LiveWeather = ({ district }) => {
+    const [weather, setWeather] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchWeather = async () => {
+            if (!district) return;
+            try {
+                // 1. Get coordinates for district
+                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${district.split('/')[0]}&count=1&language=en&format=json`);
+                const geoData = await geoRes.json();
+                
+                if (geoData.results && geoData.results.length > 0) {
+                    const { latitude, longitude } = geoData.results[0];
+                    // 2. Get weather for coordinates
+                    const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+                    const weatherData = await weatherRes.json();
+                    
+                    if (weatherData.current_weather) {
+                        setWeather(weatherData.current_weather);
+                    }
+                }
+            } catch (error) {
+                console.error("Failed to fetch weather", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchWeather();
+    }, [district]);
+
+    if (loading) {
+        return (
+            <div className="essentials-card skeleton" style={{ height: '140px', marginBottom: '2rem' }}></div>
+        );
+    }
+
+    if (!weather) return null;
+
+    const weatherInfo = getWeatherCodeData(weather.weathercode);
+
+    return (
+        <div className="essentials-card" style={{ marginBottom: '2rem' }}>
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <FaCloudSun style={{ color: '#2563eb' }} /> Live Weather
+            </h4>
+            <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <span style={{ fontSize: '3.5rem', lineHeight: '1' }}>{weatherInfo.icon}</span>
+                    <div>
+                        <div className="weather-temp" style={{ fontSize: '2.5rem', fontWeight: '800', lineHeight: '1' }}>
+                            {Math.round(weather.temperature)}°C
+                        </div>
+                        <div className="weather-desc" style={{ fontSize: '0.95rem', fontWeight: '600', marginTop: '4px' }}>
+                            {weatherInfo.label}
+                        </div>
+                    </div>
+                </div>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', borderLeft: '1px solid var(--border-color)', paddingLeft: '1.5rem' }}>
+                    <div className="weather-desc" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', fontWeight: '600' }}>
+                        <FaWind style={{ color: '#2563eb' }} /> {weather.windspeed} km/h
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export const TravelerEssentials = ({ blog }) => (
     <div className="essentials-card">
