@@ -82,9 +82,13 @@
 }
 
 .floating-back:hover {
-  transform: translateX(-5px);
+  transform: translateX(-5px) scale(1.05);
   background: #ffffff;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 25px -3px rgba(0, 0, 0, 0.15);
+}
+
+.floating-back:active {
+  transform: scale(0.92);
 }
 
 [data-theme='dark'] .floating-back {
@@ -93,7 +97,6 @@
   color: #f1f5f9;
 }
 
-/* 🔝 Scroll to Top Button */
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
@@ -111,11 +114,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .scroll-top-btn:hover {
   background: #1d4ed8;
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 15px 25px -3px rgba(37, 99, 235, 0.5);
+}
+
+.scroll-top-btn:active {
+  transform: scale(0.9);
 }
 
 /* 🌟 Hero Section */
@@ -542,8 +551,16 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
+}
+
+.btn svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:active {
+  transform: scale(0.96) !important;
 }
 
 .btn-location {
@@ -553,8 +570,12 @@
 
 .btn-location:hover {
   background: #1d4ed8;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 30px -5px rgba(37, 99, 235, 0.4);
+}
+
+.btn-location:hover svg {
+  transform: scale(1.2) rotate(15deg);
 }
 
 .btn-home {
@@ -566,8 +587,12 @@
 .btn-home:hover {
   border-color: #cbd5e1;
   background: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.08);
+}
+
+.btn-home:hover svg {
+  transform: translateX(-6px);
 }
 
 [data-theme='dark'] .btn-home {
@@ -578,6 +603,8 @@
 [data-theme='dark'] .btn-home:hover {
   background: #334155;
   color: white;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 30px -5px rgba(0, 0, 0, 0.4);
 }
 
 /* 🧭 Plan Your Visit Section */
@@ -687,13 +714,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  transition: all 0.3s ease;
+  gap: 10px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-directions svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-directions:hover {
   background: #1d4ed8;
-  transform: scale(1.02);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-directions:hover svg {
+  transform: translateX(4px) translateY(-4px);
+}
+
+.btn-directions:active {
+  transform: scale(0.96);
 }
 
 .share-links-box {
@@ -728,8 +768,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   font-size: 1rem;
+}
+
+.share-btn svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .share-btn.whatsapp {
@@ -743,8 +787,21 @@
 }
 
 .share-btn:hover {
-  opacity: 0.9;
-  transform: translateX(4px);
+  opacity: 0.95;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.share-btn.whatsapp:hover svg {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.share-btn.copy-link:hover svg {
+  transform: scale(1.2);
+}
+
+.share-btn:active {
+  transform: scale(0.95);
 }
 
 /* 🧭 Discover More Section */

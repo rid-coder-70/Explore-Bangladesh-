@@ -149,7 +149,7 @@
   font-size: 0.7rem;
   line-height: 1;
   color: #555;
-  transition: background 0.2s;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,6 +157,11 @@
 
 .search-clear:hover {
   background: #cbd5e0;
+  transform: scale(1.15) rotate(90deg);
+}
+
+.search-clear:active {
+  transform: scale(0.9);
 }
 
 /* Hero Stats */
@@ -283,6 +288,10 @@
   color: var(--accent);
   transform: scale(1.05) translateY(-3px);
   box-shadow: 0 8px 20px rgba(45, 137, 229, 0.25);
+}
+
+.filter-btn:active {
+  transform: scale(0.95);
 }
 
 .filter-btn.active {
@@ -415,43 +424,37 @@
 
 /* Read More link */
 .read-more-link {
-  display: inline-block;
-  padding: 0.45rem 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.55rem 1.25rem;
   background: var(--accent);
   color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 0.87rem;
+  font-size: 0.9rem;
   text-decoration: none;
-  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .read-more-link span {
-  display: inline-block;
-  transition: transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .read-more-link:hover {
   background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(27, 95, 189, 0.35);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(27, 95, 189, 0.35);
 }
 
 .read-more-link:hover span {
-  animation: bounce 0.5s var(--ease-expo);
-  display: inline-block;
+  transform: translateX(6px);
 }
 
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(5px);
-  }
+.read-more-link:active {
+  transform: scale(0.95);
 }
 
 .no-results {
