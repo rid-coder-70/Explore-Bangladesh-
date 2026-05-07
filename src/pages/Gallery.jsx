@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaImages, FaSearchPlus, FaTimes, FaUmbrellaBeach, FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaGlobe } from 'react-icons/fa';
 import blogData from '../data/posts.json';
-import './Gallery.css';
+import '../styles/pages/Gallery.css';
 
 import importImages from '../utils/imageLoader';
 

@@ -15,7 +15,7 @@ import {
   VisitActions,
   LiveWeather
 } from "../components/common/BlogComponents";
-import "./BlogDetail.css";
+import '../styles/pages/BlogDetail.css';
 import importImages from "../utils/imageLoader";
 
 const BlogDetail = () => {

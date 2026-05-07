@@ -1,0 +1,15 @@
+{
+  "short_name": "BanglaGo",
+  "name": "BanglaGo - Explore Bangladesh",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2d89e5",
+  "background_color": "#ffffff"
+}

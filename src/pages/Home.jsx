@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring as useFramerSpring, AnimatePresence } from
 import Hero from '../components/common/Hero';
 import FilterSection from '../components/common/FilterSection';
 import SpotCard, { SkeletonCard } from '../components/common/SpotCard';
-import './Home.css';
+import '../styles/pages/Home.css';
 
 const DIVISIONS = [
     { label: 'All', icon: <FaGlobe /> },

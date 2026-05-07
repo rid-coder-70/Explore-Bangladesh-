@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaMapMarkedAlt, FaHome, FaImages } from 'react-icons/fa';
-import './NotFound.css';
+import '../styles/pages/NotFound.css';
 
 export default function NotFound() {
     return (

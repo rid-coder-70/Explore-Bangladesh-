@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import "./Contact.css";
+import '../styles/pages/Contact.css';
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdavpwz";
 

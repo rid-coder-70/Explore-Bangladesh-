@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaBullseye, FaCamera, FaGlobe, FaMap, FaUmbrellaBeach, FaTree, FaLeaf, FaWater, FaMountain, FaHistory } from "react-icons/fa";
-import styles from "./About.module.css";
+import styles from "../styles/pages/About.module.css";
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 
