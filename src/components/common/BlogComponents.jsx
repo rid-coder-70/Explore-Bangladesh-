@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Slider from "react-slick";
-import { 
-    FaMapMarkerAlt, FaCalendarAlt, FaBus, FaHiking, 
-    FaUtensils, FaPalette, FaImages, FaShareAlt, 
+import {
+    FaMapMarkerAlt, FaCalendarAlt, FaBus, FaHiking,
+    FaUtensils, FaPalette, FaImages, FaShareAlt,
     FaDirections, FaWhatsapp, FaLink, FaCloudSun, FaWind
 } from "react-icons/fa";
 import imageMap from '../../utils/imageLoader';
 import { getWeatherCodeData } from '../../utils/weatherUtils';
 
-export const LiveWeather = ({ district }) => {
+export const LiveWeather = ({ district, division }) => {
     const [weather, setWeather] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -18,8 +18,14 @@ export const LiveWeather = ({ district }) => {
             if (!district) return;
             try {
                 // 1. Get coordinates for district
-                const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${district.split('/')[0]}&count=1&language=en&format=json`);
-                const geoData = await geoRes.json();
+                let geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${district.split('/')[0]}&count=1&language=en&format=json`);
+                let geoData = await geoRes.json();
+                
+                // Fallback to division if district not found
+                if ((!geoData.results || geoData.results.length === 0) && division) {
+                    geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${division.split('/')[0]}&count=1&language=en&format=json`);
+                    geoData = await geoRes.json();
+                }
                 
                 if (geoData.results && geoData.results.length > 0) {
                     const { latitude, longitude } = geoData.results[0];

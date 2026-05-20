@@ -49,32 +49,33 @@ body {
 }
 
 .blog-container {
-  width: min(1100px, 100% - 2rem);
-  margin: -80px auto 4rem;
-  padding: 0 clamp(1rem, 3vw, 1.5rem);
+  width: min(1200px, 100% - 1rem);
+  margin: -60px auto 4rem;
+  padding: 0;
   position: relative;
   z-index: 10;
 }
 
 .blog-body {
   background: #ffffff;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  border-radius: clamp(20px, 4vw, 32px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  padding: clamp(1rem, 4vw, 3rem);
+  border-radius: clamp(16px, 4vw, 32px);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
   transition: var(--transition-smooth);
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  overflow: hidden;
 }
 
 [data-theme='dark'] .blog-body {
   background: #1e293b;
-  border-color: #334155;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  border-color: rgba(51, 65, 85, 0.8);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 /* 🏢 Content Grid Layout */
 .content-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
+  display: flex;
+  flex-direction: row;
   gap: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 4rem;
 }
@@ -268,10 +269,12 @@ body {
 
 /* 📝 Article Content */
 .detail-content {
+  flex: 1;
+  min-width: 0;
   color: #334155;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   line-height: 1.9;
-  text-align: justify;
+  text-align: left;
 }
 
 [data-theme='dark'] .detail-content {
@@ -296,9 +299,11 @@ body {
 
 /* 👜 Essentials Sidebar */
 .essentials-sidebar {
+  width: 340px;
+  flex-shrink: 0;
   position: sticky;
   top: 100px;
-  height: fit-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: clamp(1rem, 3vw, 2rem);
@@ -707,7 +712,7 @@ body {
 
 .visit-actions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: clamp(1rem, 3vw, 2rem);
 }
 
@@ -883,7 +888,7 @@ body {
 
 .related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -1045,8 +1050,10 @@ button {
 /* Large Tablet */
 @media (max-width: 1200px) {
   .content-grid {
-    grid-template-columns: minmax(0, 1fr) 300px;
     gap: 2.5rem;
+  }
+  .essentials-sidebar {
+    width: 300px;
   }
 }
 
@@ -1057,16 +1064,17 @@ button {
   }
 
   .content-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2.5rem;
   }
 
   .essentials-sidebar {
+    width: 100%;
     position: static;
     order: -1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .essentials-card,

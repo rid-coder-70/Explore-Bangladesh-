@@ -212,7 +212,7 @@ const BlogDetail = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <LiveWeather district={blog.district} />
+                <LiveWeather district={blog.district} division={blog.division} />
                 <TravelerEssentials blog={blog} />
                 <CulturalHighlights highlights={blog.culturalHighlights} />
               </motion.aside>
