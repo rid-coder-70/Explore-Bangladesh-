@@ -6,10 +6,13 @@ import "./CustomCursor.css";
 const CustomCursor = () => {
     const [isHovering, setIsHovering] = useState(false);
     const { isDark } = useDarkMode();
+    
+    // Mouse values
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
-    const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
+    // Smooth spring config for the outer ring
+    const springConfig = { damping: 28, stiffness: 200, mass: 0.6 };
     const cursorXSpring = useSpring(cursorX, springConfig);
     const cursorYSpring = useSpring(cursorY, springConfig);
 
@@ -28,7 +31,9 @@ const CustomCursor = () => {
                 target.closest('a') ||
                 target.closest('.filter-btn') ||
                 target.closest('.read-more-link') ||
-                target.closest('.gallery-item');
+                target.closest('.gallery-item') ||
+                target.closest('input') ||
+                target.closest('textarea');
             
             setIsHovering(!!isClickable);
         };
@@ -42,33 +47,45 @@ const CustomCursor = () => {
         };
     }, [cursorX, cursorY]);
 
-    // Cursor colors based on theme
-    const activeColor = isDark ? "rgba(56, 139, 253, 0.4)" : "rgba(37, 99, 235, 0.2)";
-    const dotColor = isDark ? "#388bfd" : "#2563eb";
+    // Premium styling colors
+    const activeColor = isDark ? "rgba(56, 139, 253, 0.15)" : "rgba(37, 99, 235, 0.15)";
+    const activeBorderColor = isDark ? "rgba(56, 139, 253, 0.5)" : "rgba(37, 99, 235, 0.5)";
+    const dotColor = isDark ? "#60a5fa" : "#2563eb"; // Lighter blue in dark mode for pop
+    const ringColor = isDark ? "rgba(96, 165, 250, 0.6)" : "rgba(37, 99, 235, 0.6)";
 
     return (
         <div className="cursor-wrapper">
+            {/* The sharp dot that follows the exact cursor */}
             <motion.div
                 className="cursor-dot"
                 style={{ 
                     x: cursorX, 
                     y: cursorY,
-                    backgroundColor: dotColor
+                    backgroundColor: dotColor,
+                    boxShadow: `0 0 8px 2px ${activeColor}`
                 }}
+                animate={{
+                    scale: isHovering ? 0 : 1,
+                    opacity: isHovering ? 0 : 1
+                }}
+                transition={{ duration: 0.2 }}
             />
+            
+            {/* The outer ring with smooth lag */}
             <motion.div
                 className="cursor-ring"
                 style={{ 
                     x: cursorXSpring, 
                     y: cursorYSpring,
-                    borderColor: dotColor
+                    borderColor: ringColor
                 }}
                 animate={{
-                    scale: isHovering ? 2 : 1,
-                    backgroundColor: isHovering ? activeColor : "rgba(0,0,0,0)",
-                    borderWidth: isHovering ? "0px" : "2px"
+                    scale: isHovering ? 1.6 : 1,
+                    backgroundColor: isHovering ? activeColor : "transparent",
+                    borderColor: isHovering ? activeBorderColor : ringColor,
+                    borderWidth: isHovering ? "1px" : "1.5px"
                 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
         </div>
     );

@@ -19,7 +19,7 @@ const DIVISIONS = [
     { label: 'Mymensingh', icon: <FaMapMarkerAlt /> }
 ];
 
-const heroBgs = ['coxsbazar2.jpg', 'bandarban.jpg', 'tanguarhaor1.jpg', 'srimangal1.jpg'];
+
 
 const Home = () => {
     const [touristSpots, setTouristSpots] = useState([]);
@@ -27,7 +27,6 @@ const Home = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [activeDivision, setActiveDivision] = useState('All');
     const [activeDistrict, setActiveDistrict] = useState('All');
-    const [heroBgIdx, setHeroBgIdx] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
 
     const { scrollYProgress } = useScroll();
@@ -43,9 +42,6 @@ const Home = () => {
     };
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setHeroBgIdx(i => (i + 1) % heroBgs.length);
-        }, 5000);
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 640);
         };
@@ -53,10 +49,10 @@ const Home = () => {
         window.addEventListener('resize', checkMobile);
 
         return () => {
-            clearInterval(timer);
             window.removeEventListener('resize', checkMobile);
         };
     }, []);
+
 
     useEffect(() => {
         import('../data/posts.json')
@@ -110,9 +106,7 @@ const Home = () => {
             />
 
             <div className="home-wrapper">
-                <Hero 
-                    heroBgs={heroBgs}
-                    heroBgIdx={heroBgIdx}
+                <Hero
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
                     touristCount={touristSpots.length}

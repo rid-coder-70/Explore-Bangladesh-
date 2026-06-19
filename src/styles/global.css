@@ -1,3 +1,8 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4: map dark: variant to [data-theme=dark] ── */
+@variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 /* =============================================
    CSS CUSTOM PROPERTIES (Light & Dark Themes)
    ============================================= */
@@ -43,6 +48,28 @@ main {
   width: min(100%, 1200px);
   margin: 0 auto;
   padding: 0 1rem 2rem;
+  /* Offset for fixed desktop navbar */
+  padding-top: 96px;
+}
+
+@media (max-width: 767px) {
+  main {
+    /* Offset for fixed mobile top header */
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Footer: guarantee clearance from bottom mobile nav */
+.footer-main {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .footer-main {
+    /* Bottom nav is ~80px tall, add generous buffer */
+    padding-bottom: 120px !important;
+  }
 }
 
 img,
@@ -114,6 +141,37 @@ body {
 
 a {
   text-decoration: none;
+}
+
+/* ── Hero two-column grid ── */
+.hero-grid-section {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.hero-shuffle-grid {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-grid-section {
+    grid-template-columns: 1fr !important;
+    padding: 40px 20px 60px;
+    min-height: auto !important;
+    gap: 32px !important;
+  }
+
+  .hero-shuffle-grid {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .shuffle-grid-inner {
+    grid-template-columns: repeat(4, 100px) !important;
+    grid-template-rows: repeat(4, 100px) !important;
+    height: auto !important;
+    width: max-content;
+  }
 }
 
 /* =============================================
@@ -564,6 +622,47 @@ main {
 }
 
 /* =============================================
+   HERO GRID LAYOUT
+   ============================================= */
+.hero-grid-section {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+.hero-shuffle-grid {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-grid-section {
+    grid-template-columns: 1fr !important;
+    padding: 40px 20px 100px !important;
+  }
+
+  .hero-shuffle-grid {
+    display: none !important;
+  }
+}
+
+/* ── Mobile Bottom Nav Padding ── */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+/* ── dark mode for search bar ── */
+[data-theme="dark"] #hero-search {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .hero-search-input-wrapper {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+
+
+/* =============================================
    AURORA BACKGROUND (2026 UI TREND)
    ============================================= */
 body::before,
@@ -660,5 +759,174 @@ body::after {
 
   100% {
     transform: translateY(5%) scale(1.1) rotate(5deg);
+  }
+}
+
+/* =============================================
+   ROCKET LOADER
+   ============================================= */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fazer1 {
+  0%   { left: 0; }
+  100% { left: -80px; opacity: 0; }
+}
+@keyframes fazer2 {
+  0%   { left: 0; }
+  100% { left: -100px; opacity: 0; }
+}
+@keyframes fazer3 {
+  0%   { left: 0; }
+  100% { left: -50px; opacity: 0; }
+}
+@keyframes fazer4 {
+  0%   { left: 0; }
+  100% { left: -150px; opacity: 0; }
+}
+@keyframes speeder {
+  0%   { transform: translate(2px,1px) rotate(0deg); }
+  10%  { transform: translate(-1px,-3px) rotate(-1deg); }
+  20%  { transform: translate(-2px,0px) rotate(1deg); }
+  30%  { transform: translate(1px,2px) rotate(0deg); }
+  40%  { transform: translate(1px,-1px) rotate(1deg); }
+  50%  { transform: translate(-1px,3px) rotate(-1deg); }
+  60%  { transform: translate(-1px,1px) rotate(0deg); }
+  70%  { transform: translate(3px,1px) rotate(-1deg); }
+  80%  { transform: translate(-2px,-1px) rotate(1deg); }
+  90%  { transform: translate(2px,1px) rotate(0deg); }
+  100% { transform: translate(1px,-2px) rotate(-1deg); }
+}
+@keyframes lf  { 0% { left: 200%; } 100% { left: -200%; opacity: 0; } }
+@keyframes lf2 { 0% { left: 200%; } 100% { left: -200%; opacity: 0; } }
+@keyframes lf3 { 0% { left: 200%; } 100% { left: -100%; opacity: 0; } }
+@keyframes lf4 { 0% { left: 200%; } 100% { left: -100%; opacity: 0; } }
+@keyframes moveClouds {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-200vw); }
+}
+
+.loader-container {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #bfdbfe 100%);
+}
+
+/* clouds */
+.clouds {
+  position: absolute;
+  inset: 0;
+  animation: moveClouds 12s linear infinite;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-left: 100%;
+  white-space: nowrap;
+}
+.cloud {
+  background: white;
+  border-radius: 50px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.cloud1 { width: 80px;  height: 24px; margin-top: -30px; }
+.cloud2 { width: 60px;  height: 18px; margin-top: 10px; }
+.cloud3 { width: 100px; height: 28px; margin-top: -10px; }
+.cloud4 { width: 50px;  height: 16px; margin-top: 20px; }
+.cloud5 { width: 70px;  height: 22px; margin-top: -20px; }
+
+/* rocket body */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: speeder 0.4s linear infinite;
+}
+
+.loader > span {
+  display: block;
+  width: 60px;
+  height: 8px;
+  background: #2563eb;
+  border-radius: 4px;
+  position: relative;
+}
+.loader > span > span {
+  position: absolute;
+  background: #1d4ed8;
+  border-radius: 2px;
+}
+.loader > span > span:nth-child(1) { width: 30px; height: 6px; top: -4px; left: 5px; }
+.loader > span > span:nth-child(2) { width: 15px; height: 5px; top: -8px; left: 10px; }
+.loader > span > span:nth-child(3) { width: 8px;  height: 4px; top: -10px; left: 14px; }
+.loader > span > span:nth-child(4) {
+  width: 0; height: 0;
+  top: -14px; left: 16px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #2563eb;
+  background: transparent;
+}
+
+.loader .base {
+  position: absolute;
+  top: 2px;
+  left: -2px;
+}
+.loader .base > span {
+  display: block;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-right: 16px solid #ef4444;
+}
+.loader .face {
+  position: absolute;
+  width: 10px; height: 10px;
+  background: white;
+  border-radius: 50%;
+  top: -10px; left: 20px;
+  border: 2px solid #2563eb;
+}
+
+/* speed lines */
+.longfazers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+.longfazers span {
+  position: absolute;
+  height: 2px;
+  background: rgba(37,99,235,0.25);
+  border-radius: 2px;
+}
+.longfazers span:nth-child(1) { width: 130px; top: 35%; animation: lf 0.6s linear infinite; }
+.longfazers span:nth-child(2) { width: 80px;  top: 50%; animation: lf2 0.8s linear infinite 0.1s; }
+.longfazers span:nth-child(3) { width: 110px; top: 60%; animation: lf3 0.7s linear infinite 0.2s; }
+.longfazers span:nth-child(4) { width: 60px;  top: 75%; animation: lf4 0.9s linear infinite 0.05s; }
+
+/* =============================================
+   NAVBAR RESPONSIVENESS (Inline style overrides)
+   ============================================= */
+@media (min-width: 768px) {
+  .navbar-desktop {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-mobile-header {
+    display: flex !important;
+  }
+  .navbar-mobile-bottom {
+    display: block !important;
   }
 }

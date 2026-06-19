@@ -17,6 +17,7 @@ import {
 } from "../components/common/BlogComponents";
 import '../styles/pages/BlogDetail.css';
 import importImages from "../utils/imageLoader";
+import { RocketLoader } from "../components/ui/rocket-loader";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -25,6 +26,7 @@ const BlogDetail = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -166,7 +168,22 @@ const BlogDetail = () => {
           transition={{ duration: 1 }}
         >
           <div className="hero-bg-wrapper">
-            <img src={importImages[blog.image]} alt={blog.title} className="hero-bg-img" />
+            {!heroLoaded && (
+              <div style={{
+                position: 'absolute', inset: 0, zIndex: 2,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                background: 'linear-gradient(135deg, #dbeafe, #eff6ff)'
+              }}>
+                <RocketLoader />
+              </div>
+            )}
+            <img
+              src={importImages[blog.image]}
+              alt={blog.title}
+              className="hero-bg-img"
+              onLoad={() => setHeroLoaded(true)}
+              style={{ opacity: heroLoaded ? 1 : 0, transition: 'opacity 0.5s ease' }}
+            />
             <div className="hero-overlay"></div>
           </div>
           <motion.div

@@ -11,23 +11,23 @@ BanglaGo is a modern, high-performance web application built with **React** that
 ## Tech Stack
 - **Frontend Core**: [React.js](https://reactjs.org/) (Hooks & Functional Components)
 - **Routing**: [React Router 7](https://reactrouter.com/)
-- **Styling**: Vanilla CSS (Custom Grid, Flexbox, & Glassmorphism)
+- **Styling**: Tailwind CSS v4, Vanilla CSS (Glassmorphism & Advanced Selectors)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/), [React Type Animation](https://www.npmjs.com/package/react-type-animation), [React CountUp](https://www.npmjs.com/package/react-countup)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
 - **UI Feedback**: [React Hot Toast](https://react-hot-toast.com/)
-- **Image Handling**: [React Slick](https://react-slick.neostack.com/)
+- **Image Handling**: [React Slick](https://react-slick.neostack.com/) & Native Vite Glob Imports
 - **SEO**: [React Helmet Async](https://github.com/staylor/react-helmet-async)
 
 ## Features
+- **Premium UI/UX Engine**: Features a custom physics-based Framer Motion glassmorphism cursor, smooth hover reveals, and high-end aesthetic tokens.
+- **Dynamic SkyToggle Theme**: Seamless global transition between light and dark themes using React Context and a custom animated day/night toggle.
+- **Modern Navigation**: Responsive floating "pill" navbar on desktop and a fixed application-style bottom menu for mobile users.
+- **Interactive Shuffle Hero**: A stunning landing page featuring an automatic shuffle grid of 16 top destinations that adapts beautifully to mobile via horizontal scroll.
+- **Glassmorphism SpotCards**: Destination cards designed with modern depth, dynamic gradient badges, and backdrop blur effects.
 - **Division & District-wise Exploration**: Destinations neatly categorized by 8 Divisions and specific Districts for precise discovery.
-- **Glassmorphism UI**: Sleek, modern frosted-glass components for premium feel.
 - **Scroll-Triggered Animations**: Smooth, cascading entrance animations powered by `framer-motion` as you scroll.
-- **Bilingual Cultural Highlights**: Local food and traditional crafts showcased in both English and Bangla.
-- **In-depth Travel Blogs**: Detailed articles for each destination covering history, culture, and travel tips.
-- **Dark Mode Support**: Seamless global transition between light and dark themes using React Context.
-- **Responsive by Design**: Fully optimized grid layouts for mobile, tablet, and desktop viewports.
 - **Advanced Search**: Filter destinations instantly by Division, District, Title, or Description.
-- **Pro UI/UX**: Dynamic typing effects, animated statistic counters, toast notifications, and fast loading.
+- **Bilingual Cultural Highlights**: Local food and traditional crafts showcased in both English and Bangla.
 
 ## Installation
 Ensure you have Node.js (v16 or higher) installed.
@@ -60,6 +60,9 @@ The application uses local JSON files to serve as a fast, robust mockup API for 
 
 
 ## Screenshots
+
+![Premium Hero Layout](public/hero-screenshot.png)
+*(Save the screenshot you captured as `public/hero-screenshot.png` to display it here)*
 
 ![Home Page](public/home.jpg)
 ![Destination Explorer](public/Tourist_Destination.jpg)

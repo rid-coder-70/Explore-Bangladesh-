@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { FaImages, FaSearchPlus, FaTimes, FaUmbrellaBeach, FaTree, FaMountain, FaLeaf, FaHistory, FaWater, FaGlobe } from 'react-icons/fa';
 import blogData from '../data/posts.json';
 import '../styles/pages/Gallery.css';
-
 import importImages from '../utils/imageLoader';
+import { RocketLoader } from '../components/ui/rocket-loader';
 
 const CATEGORY_MAP = {
     Beach: { color: '#0077b6', icon: <FaUmbrellaBeach /> },
@@ -26,12 +26,41 @@ const CATEGORIES = [
     { label: 'Wetland', icon: <FaWater /> },
 ];
 
+// Per-image lazy loader wrapper
+const LazyGalleryImg = ({ src, alt, className }) => {
+    const [loaded, setLoaded] = useState(false);
+    return (
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+            {!loaded && (
+                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#eff6ff', borderRadius: 'inherit' }}>
+                    <RocketLoader scale={0.7} />
+                </div>
+            )}
+            <img
+                src={src}
+                alt={alt}
+                className={className}
+                loading="lazy"
+                onLoad={() => setLoaded(true)}
+                style={{ opacity: loaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
+            />
+        </div>
+    );
+};
+
 export default function Gallery() {
     const [activeCategory, setActiveCategory] = useState('All');
     const [lightboxImg, setLightboxImg] = useState(null);
     const [lightboxTitle, setLightboxTitle] = useState('');
     const [lightboxId, setLightboxId] = useState(null);
     const [visible, setVisible] = useState(false);
+    const [pageLoading, setPageLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate brief load for page entry
+        const t = setTimeout(() => setPageLoading(false), 1200);
+        return () => clearTimeout(t);
+    }, []);
 
     const filtered = blogData.filter(
         spot => activeCategory === 'All' || spot.category === activeCategory
@@ -57,6 +86,15 @@ export default function Gallery() {
         window.addEventListener('keydown', handleKey);
         return () => window.removeEventListener('keydown', handleKey);
     }, []);
+
+    if (pageLoading) {
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', gap: '16px' }}>
+                <RocketLoader />
+                <p style={{ color: '#2563eb', fontWeight: 600, fontSize: '1rem' }}>Loading Gallery…</p>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -111,11 +149,10 @@ export default function Gallery() {
                             aria-label={`View ${spot.title}`}
                             onKeyDown={e => e.key === 'Enter' && openLightbox(spot.image, spot.title, spot.id)}
                         >
-                            <img
+                            <LazyGalleryImg
                                 src={importImages[spot.image]}
                                 alt={spot.title}
                                 className="gallery-img"
-                                loading="lazy"
                             />
                             <div className="gallery-item-overlay">
                                 <span

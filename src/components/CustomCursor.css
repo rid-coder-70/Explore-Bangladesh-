@@ -1,32 +1,49 @@
-.cursor-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+/* CustomCursor.css */
+
+.cursor-wrapper {
+    pointer-events: none;
+    z-index: 99999;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: fixed;
+    /* Offset by half width/height to center precisely on mouse coordinates */
+    top: -4px;
+    left: -4px;
     pointer-events: none;
     z-index: 9999;
     transition: background-color 0.3s ease;
 }
 
 .cursor-ring {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     position: fixed;
-    top: -18px;
-    left: -18px;
+    /* Offset by half width/height to center precisely on mouse coordinates */
+    top: -22px;
+    left: -22px;
     pointer-events: none;
     z-index: 9998;
+    border-style: solid;
     transition: border-color 0.3s ease;
+    
+    /* Adds a premium glass-like blur effect inside the ring when it expands over buttons */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
-/* Hide custom cursor on mobile to prevent ghost taps and lag */
-@media (max-width: 768px) {
-
-    .cursor-dot,
-    .cursor-ring {
-        display: none;
+/* Hide custom cursor on tablet/mobile to prevent lag and ghost taps */
+@media (max-width: 1024px) {
+    .cursor-wrapper {
+        display: none !important;
     }
 }

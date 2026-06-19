@@ -2,9 +2,11 @@
   "name": "banglago",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "framer-motion": "^12.34.4",
+    "lucide-react": "^1.21.0",
     "react": "^19.1.1",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.1",
@@ -15,6 +17,7 @@
     "react-slick": "^0.30.3",
     "react-type-animation": "^3.2.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.4.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -42,11 +45,13 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^5.1.4",
     "jsdom": "^28.1.0",
+    "tailwindcss": "^4.3.1",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   }
