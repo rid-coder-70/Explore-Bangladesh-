@@ -17,9 +17,9 @@ describe('Navbar Component', () => {
       </HelmetProvider>
     );
     
-    // Check if the brand name is present
-    const brandElement = screen.getByText(/BanglaGo/i);
-    expect(brandElement).toBeInTheDocument();
+    // Brand name is split into "Bangla" and "Go" with different colors
+    const brandElements = screen.getAllByText(/Bangla/i);
+    expect(brandElements.length).toBeGreaterThan(0);
   });
 
   it('contains navigation links', () => {
@@ -33,7 +33,8 @@ describe('Navbar Component', () => {
       </HelmetProvider>
     );
     
-    expect(screen.getByText(/Home/i)).toBeInTheDocument();
-    expect(screen.getByText(/Gallery/i)).toBeInTheDocument();
+    // We use getAllByText because Navbar renders both desktop and mobile links
+    expect(screen.getAllByText(/Home/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Gallery/i).length).toBeGreaterThan(0);
   });
 });

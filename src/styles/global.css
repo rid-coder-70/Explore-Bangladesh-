@@ -61,14 +61,15 @@ main {
 }
 
 /* Footer: guarantee clearance from bottom mobile nav */
-.footer-main {
-  padding-bottom: 2rem;
+.footer-mobile-spacer {
+  display: none;
 }
 
 @media (max-width: 767px) {
-  .footer-main {
-    /* Bottom nav is ~80px tall, add generous buffer */
-    padding-bottom: 120px !important;
+  .footer-mobile-spacer {
+    display: block;
+    height: 110px;
+    width: 100%;
   }
 }
 

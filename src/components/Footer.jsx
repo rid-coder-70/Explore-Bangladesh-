@@ -229,6 +229,14 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
+                
+                <style>
+                {`
+                    .footer-safe-area { display: block; height: 120px; width: 100%; }
+                    @media (min-width: 768px) { .footer-safe-area { display: none; } }
+                `}
+                </style>
+                <div className="footer-safe-area"></div>
             </div>
         </footer>
     );
