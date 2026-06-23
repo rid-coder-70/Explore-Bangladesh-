@@ -20,7 +20,7 @@
     left: -4px;
     pointer-events: none;
     z-index: 9999;
-    transition: background-color 0.3s ease;
+    transition: background-color  0.2s var(--ease-expo);
 }
 
 .cursor-ring {
@@ -34,7 +34,7 @@
     pointer-events: none;
     z-index: 9998;
     border-style: solid;
-    transition: border-color 0.3s ease;
+    transition: border-color  0.2s var(--ease-expo);
     
     /* Adds a premium glass-like blur effect inside the ring when it expands over buttons */
     backdrop-filter: blur(2px);

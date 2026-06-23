@@ -3,7 +3,7 @@
   background: var(--footer-bg);
   color: var(--footer-text);
   padding: 3rem 2rem 0;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.2s, color 0.2s;
   border-top: 1px solid var(--footer-border);
 }
 

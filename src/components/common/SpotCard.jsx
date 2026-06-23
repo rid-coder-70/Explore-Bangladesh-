@@ -35,7 +35,7 @@ const SpotCard = ({ spot, index, isMobile }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
       custom={index}
-      whileHover={!isMobile ? { y: -8, transition: { duration: 0.3 } } : {}}
+      whileHover={!isMobile ? { y: -8, transition: { duration: 0.2, ease: "easeOut" } } : {}}
     >
       {/* Image Section */}
       <div className="spot-image-wrapper">

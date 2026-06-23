@@ -13,7 +13,8 @@ import {
   CulturalHighlights, 
   VisualJourney, 
   VisitActions,
-  LiveWeather
+  LiveWeather,
+  DistanceToDestination
 } from "../components/common/BlogComponents";
 import '../styles/pages/BlogDetail.css';
 import importImages from "../utils/imageLoader";
@@ -24,7 +25,6 @@ const BlogDetail = () => {
   const navigate = useNavigate();
   const blog = blogData.find((b) => b.id === parseInt(id));
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [showScrollTop, setShowScrollTop] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
   const [heroLoaded, setHeroLoaded] = useState(false);
 
@@ -34,7 +34,6 @@ const BlogDetail = () => {
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scroll = `${(totalScroll / windowHeight) * 100}%`;
       setScrollProgress(scroll);
-      setShowScrollTop(totalScroll > 400);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -59,10 +58,6 @@ const BlogDetail = () => {
     autoplaySpeed: 3000,
     fade: true,
     cssEase: "linear",
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const shareLocation = () => {
@@ -115,25 +110,6 @@ const BlogDetail = () => {
       <div className="progress-container">
         <div className="progress-bar" style={{ width: scrollProgress }}></div>
       </div>
-
-      <button className="floating-back" onClick={() => navigate(-1)} title="Go Back">
-        <FaChevronLeft />
-      </button>
-
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            className="scroll-top-btn"
-            onClick={scrollToTop}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-          >
-            <FaArrowUp />
-          </motion.button>
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {selectedImg && (
@@ -210,6 +186,19 @@ const BlogDetail = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
+            {/* Premium Quick Stats Row */}
+            <motion.div 
+              className="quick-stats-row"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}
+            >
+              <DistanceToDestination district={blog.district} division={blog.division} locationUrl={blog.locationUrl} />
+              <LiveWeather district={blog.district} division={blog.division} />
+            </motion.div>
+
             <div className="content-grid">
               <div className="detail-content">
                 {blog.content.split('\n').map((paragraph, index) => (
@@ -221,7 +210,16 @@ const BlogDetail = () => {
                     {paragraph}
                   </motion.p>
                 ))}
+                
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} style={{ marginTop: '3rem' }}>
+                  <VisualJourney 
+                    images={blog.moreImages} 
+                    onImageClick={setSelectedImg} 
+                    sliderSettings={sliderSettings} 
+                  />
+                </motion.div>
               </div>
+              
               <motion.aside
                 className="essentials-sidebar"
                 initial={{ opacity: 0, x: 50 }}
@@ -229,19 +227,10 @@ const BlogDetail = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <LiveWeather district={blog.district} division={blog.division} />
                 <TravelerEssentials blog={blog} />
                 <CulturalHighlights highlights={blog.culturalHighlights} />
               </motion.aside>
             </div>
-
-            <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <VisualJourney 
-                images={blog.moreImages} 
-                onImageClick={setSelectedImg} 
-                sliderSettings={sliderSettings} 
-              />
-            </motion.div>
 
             <motion.div
               className="detail-footer"

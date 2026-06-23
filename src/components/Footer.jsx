@@ -53,7 +53,7 @@ export default function Footer() {
                                 background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff',
                                 boxShadow: '0 8px 24px rgba(37,99,235,0.35)',
-                                transition: 'transform 0.3s ease'
+                                transition: 'transform  0.2s var(--ease-expo)'
                             }} className="group-hover:scale-105">
                                 <Navigation size={22} style={{ transform: 'rotate(-45deg)', marginLeft: '2px' }} />
                             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                                         color: isDark ? '#cbd5e1' : '#64748b',
                                         boxShadow: isDark ? 'none' : '0 4px 12px rgba(0,0,0,0.05)',
                                         border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.03)',
-                                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                                        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
                                     }}
                                     onMouseEnter={e => {
                                         e.currentTarget.style.background = social.color;
@@ -175,7 +175,7 @@ export default function Footer() {
                                     fontSize: '0.95rem',
                                     outline: 'none',
                                     boxShadow: isDark ? 'inset 0 2px 4px rgba(0,0,0,0.2)' : 'inset 0 2px 4px rgba(0,0,0,0.02)',
-                                    transition: 'border-color 0.3s ease, box-shadow 0.3s ease'
+                                    transition: 'border-color  0.2s var(--ease-expo), box-shadow 0.2s var(--ease-expo)'
                                 }}
                                 onFocus={e => {
                                     e.target.style.borderColor = '#2563eb';

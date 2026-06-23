@@ -136,7 +136,7 @@ body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color  0.2s var(--ease-expo), color 0.2s var(--ease-expo);
   overflow-x: hidden;
 }
 
@@ -192,7 +192,7 @@ a {
   border-radius: 50px;
   z-index: 1000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background  0.2s var(--ease-expo), transform 0.2s var(--ease-expo);
   border: 1px solid rgba(255, 255, 255, 0.05);
   /* Soft border for floating effect */
 }
@@ -241,7 +241,7 @@ a {
 
 .logo_bounce span {
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   color: inherit;
 }
 
@@ -355,13 +355,13 @@ a {
   letter-spacing: 0.2px;
   padding: 0.5rem 0.8rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all  0.2s var(--ease-expo);
 }
 
 .nav-links a span {
   color: var(--navbar-text);
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .nav-links a:hover {
@@ -438,7 +438,7 @@ a {
   width: auto;
   margin-right: 12px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform  0.2s var(--ease-expo);
 }
 
 .logo-img:hover {
@@ -454,7 +454,7 @@ a {
   font-size: 1.8rem;
   color: var(--navbar-text);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform  0.2s var(--ease-expo);
 }
 
 .menu-icon:hover {
@@ -510,7 +510,7 @@ a {
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all  0.2s var(--ease-expo);
   }
 
   .menu-icon.open {
@@ -566,7 +566,7 @@ a {
     padding: 0.6rem 0;
     /* reduce padding */
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all  0.2s var(--ease-expo);
   }
 
   .nav-links a:hover {

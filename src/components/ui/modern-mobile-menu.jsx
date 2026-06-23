@@ -76,7 +76,7 @@ const InteractiveMenu = ({ items, accentColor, onNavigate }) => {
               background: isActive ? 'rgba(37,99,235,0.08)' : 'transparent',
               borderRadius: '14px',
               cursor: 'pointer',
-              transition: 'all 0.3s ease',
+              transition: 'all  0.2s var(--ease-expo)',
               color: isActive ? '#2563eb' : '#6b7280',
               minWidth: '52px',
               position: 'relative',
@@ -87,7 +87,7 @@ const InteractiveMenu = ({ items, accentColor, onNavigate }) => {
               style={{
                 width: '22px',
                 height: '22px',
-                transition: 'transform 0.3s ease',
+                transition: 'transform  0.2s var(--ease-expo)',
                 transform: isActive ? 'translateY(-2px)' : 'translateY(0)',
               }}
             />
@@ -97,7 +97,7 @@ const InteractiveMenu = ({ items, accentColor, onNavigate }) => {
                 fontSize: '10px',
                 fontWeight: isActive ? '700' : '500',
                 letterSpacing: '0.02em',
-                transition: 'all 0.3s ease',
+                transition: 'all  0.2s var(--ease-expo)',
               }}
             >
               {item.label}
@@ -112,7 +112,7 @@ const InteractiveMenu = ({ items, accentColor, onNavigate }) => {
                 height: '2px',
                 background: '#2563eb',
                 borderRadius: '2px',
-                transition: 'width 0.3s ease',
+                transition: 'width  0.2s var(--ease-expo)',
               }} />
             )}
           </button>
