@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
-import { FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaGlobe } from "react-icons/fa";
 import '../styles/pages/Contact.css';
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdavpwz";
@@ -62,16 +62,16 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | BanglaGo</title>
-        <meta name="description" content="Get in touch with BanglaGo. Send us your travel questions, feedback or suggestions." />
+        <title>Contact Us | BanglaGo — Grovegrid</title>
+        <meta name="description" content="Get in touch with BanglaGo by Grovegrid. Reach us at grovegridsite@gmail.com or visit grovegrid.site for travel questions, feedback, or suggestions." />
       </Helmet>
 
       <div className="contact-wrapper">
         <div className="contact-info">
           <h2>Get In Touch</h2>
           <p>
-            Have a travel question, feedback, or suggestion? We'd love to hear from you.
-            Fill in the form and we'll get back to you as soon as possible.
+            Have a travel question, feedback, or suggestion? Reach out to the <strong style={{ color: '#fff' }}>Grovegrid</strong> team —
+            we'd love to hear from you and will get back as soon as possible.
           </p>
 
           <div className="contact-cards">
@@ -85,8 +85,19 @@ export default function Contact() {
             <div className="contact-card">
               <span className="contact-card-icon"><FaEnvelope /></span>
               <div>
-                <strong>Email</strong>
-                <p>ridoybaidya2@gmail.com</p>
+                <strong>Official Email</strong>
+                <a href="mailto:grovegridsite@gmail.com" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.82rem', textDecoration: 'none' }}>
+                  grovegridsite@gmail.com
+                </a>
+              </div>
+            </div>
+            <div className="contact-card">
+              <span className="contact-card-icon"><FaGlobe /></span>
+              <div>
+                <strong>Website</strong>
+                <a href="https://www.grovegrid.site" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.82rem', textDecoration: 'none' }}>
+                  www.grovegrid.site
+                </a>
               </div>
             </div>
             <div className="contact-card">
@@ -98,8 +109,29 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Startup badge */}
+          <div style={{
+            marginTop: 'auto',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            background: 'rgba(255,255,255,0.12)',
+            borderRadius: '50px',
+            padding: '0.4rem 0.9rem',
+            width: 'fit-content',
+            marginBottom: '0.75rem',
+            fontSize: '0.75rem',
+            fontWeight: 700,
+            letterSpacing: '0.05em',
+            color: '#bfdbfe',
+            textTransform: 'uppercase',
+          }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#34d399', display: 'inline-block', animation: 'pulse 2s infinite' }} />
+            Powered by Grovegrid
+          </div>
+
           <div className="contact-social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="csocial-link facebook" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1BmG6zZqZg" target="_blank" rel="noopener noreferrer" className="csocial-link facebook" aria-label="Facebook">
               <FaFacebookF />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="csocial-link instagram" aria-label="Instagram">
