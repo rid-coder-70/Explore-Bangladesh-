@@ -5,8 +5,28 @@ import { Navigation, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useDarkMode } from '../context/DarkModeContext';
 
+// 1. Move static data outside the component to prevent redeclaration on every render
+const SOCIAL_LINKS = [
+    { icon: FaFacebookF, color: "hover:bg-[#1877f2] hover:border-[#1877f2] hover:shadow-[#1877f2]/40", name: "Facebook" },
+    { icon: FaInstagram, color: "hover:bg-[#e4405f] hover:border-[#e4405f] hover:shadow-[#e4405f]/40", name: "Instagram" },
+    { icon: FaTwitter, color: "hover:bg-[#1da1f2] hover:border-[#1da1f2] hover:shadow-[#1da1f2]/40", name: "Twitter" },
+    { icon: FaYoutube, color: "hover:bg-[#ff0000] hover:border-[#ff0000] hover:shadow-[#ff0000]/40", name: "YouTube" }
+];
+
+const EXPLORE_LINKS = [
+    { name: 'Home', path: '/' },
+    { name: 'Destinations Gallery', path: '/destinations' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact Support', path: '/contact' }
+];
+
+const LEGAL_LINKS = ['Privacy Policy', 'Terms of Service', 'Cookie Policy'];
+
 export default function Footer() {
     const [email, setEmail] = useState("");
+    
+    // Assuming your app uses Tailwind's 'dark:' classes via a parent wrapper or HTML tag.
+    // We keep the hook in case you need it for logic, but styling is now handled via Tailwind.
     const { isDark } = useDarkMode();
 
     const handleSubscribe = (e) => {
@@ -18,84 +38,36 @@ export default function Footer() {
     };
 
     return (
-        <footer
-            className="footer-main"
-            style={{ 
-                paddingTop: '5rem',
-                background: isDark 
-                    ? 'linear-gradient(to bottom, #0f172a, #020617)' 
-                    : 'linear-gradient(to bottom, #f8fafc, #f1f5f9)',
-                borderTop: isDark ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.05)',
-                position: 'relative',
-                overflow: 'hidden'
-            }}
-        >
+        <footer className="relative overflow-hidden pt-12 pb-8 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 border-t border-black/5 dark:border-white/5">
+            
             {/* Ambient Background Glows */}
-            <div style={{
-                position: 'absolute', top: '-10%', left: '-5%', width: '30%', height: '50%',
-                background: isDark ? 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 70%)',
-                filter: 'blur(60px)', pointerEvents: 'none'
-            }} />
-            <div style={{
-                position: 'absolute', bottom: '-10%', right: '-5%', width: '40%', height: '60%',
-                background: isDark ? 'radial-gradient(circle, rgba(147,51,234,0.08) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(147,51,234,0.04) 0%, transparent 70%)',
-                filter: 'blur(60px)', pointerEvents: 'none'
-            }} />
+            <div className="absolute -top-[10%] -left-[5%] w-[30%] h-[50%] bg-[radial-gradient(circle,rgba(37,99,235,0.05)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(37,99,235,0.08)_0%,transparent_70%)] blur-[60px] pointer-events-none" aria-hidden="true" />
+            <div className="absolute -bottom-[10%] -right-[5%] w-[40%] h-[60%] bg-[radial-gradient(circle,rgba(147,51,234,0.04)_0%,transparent_70%)] dark:bg-[radial-gradient(circle,rgba(147,51,234,0.08)_0%,transparent_70%)] blur-[60px] pointer-events-none" aria-hidden="true" />
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 mb-16">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-12">
                     
                     {/* Brand Section */}
-                    <div className="flex flex-col gap-6 lg:pr-4">
-                        <Link to="/" className="flex items-center gap-2 group w-fit" style={{ textDecoration: 'none' }}>
-                            <div style={{
-                                width: '40px', height: '40px', borderRadius: '12px',
-                                background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff',
-                                boxShadow: '0 8px 24px rgba(37,99,235,0.35)',
-                                transition: 'transform  0.2s var(--ease-expo)'
-                            }} className="group-hover:scale-105">
-                                <Navigation size={22} style={{ transform: 'rotate(-45deg)', marginLeft: '2px' }} />
+                    <div className="flex flex-col gap-6">
+                        <Link to="/" className="flex items-center gap-2 group w-fit">
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white shadow-[0_8px_24px_rgba(37,99,235,0.35)] transition-transform duration-200 group-hover:scale-105">
+                                <Navigation size={22} className="-rotate-45 ml-0.5" />
                             </div>
-                            <span style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '-0.5px', color: isDark ? '#fff' : '#0f172a' }}>
-                                Bangla<span style={{ color: '#2563eb' }}>Go</span>
+                            <span className="font-extrabold text-[1.4rem] tracking-tight text-slate-900 dark:text-white">
+                                Bangla<span className="text-blue-600">Go</span>
                             </span>
                         </Link>
-                        <p style={{ color: isDark ? '#94a3b8' : '#475569', lineHeight: 1.7, fontSize: '0.95rem' }}>
-                            Your ultimate guide to the most iconic, breathtaking, and culturally rich
-                            destinations across Bangladesh.
+                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-[0.95rem] m-0 max-w-[280px]">
+                            Your ultimate guide to the most iconic, breathtaking, and culturally rich destinations across Bangladesh.
                         </p>
+                        
                         <div className="flex items-center gap-4 mt-2">
-                            {[
-                                { icon: FaFacebookF, color: '#1877f2' },
-                                { icon: FaInstagram, color: '#e4405f' },
-                                { icon: FaTwitter,   color: '#1da1f2' },
-                                { icon: FaYoutube,   color: '#ff0000' }
-                            ].map((social, idx) => (
-                                <a key={idx} href="#" 
-                                    style={{
-                                        width: '42px', height: '42px', borderRadius: '50%',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        background: isDark ? 'rgba(255,255,255,0.05)' : '#fff',
-                                        color: isDark ? '#cbd5e1' : '#64748b',
-                                        boxShadow: isDark ? 'none' : '0 4px 12px rgba(0,0,0,0.05)',
-                                        border: isDark ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(0,0,0,0.03)',
-                                        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
-                                    }}
-                                    onMouseEnter={e => {
-                                        e.currentTarget.style.background = social.color;
-                                        e.currentTarget.style.color = '#fff';
-                                        e.currentTarget.style.transform = 'translateY(-3px)';
-                                        e.currentTarget.style.boxShadow = `0 10px 20px ${social.color}40`;
-                                        e.currentTarget.style.borderColor = social.color;
-                                    }}
-                                    onMouseLeave={e => {
-                                        e.currentTarget.style.background = isDark ? 'rgba(255,255,255,0.05)' : '#fff';
-                                        e.currentTarget.style.color = isDark ? '#cbd5e1' : '#64748b';
-                                        e.currentTarget.style.transform = 'translateY(0)';
-                                        e.currentTarget.style.boxShadow = isDark ? 'none' : '0 4px 12px rgba(0,0,0,0.05)';
-                                        e.currentTarget.style.borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.03)';
-                                    }}
+                            {SOCIAL_LINKS.map((social, idx) => (
+                                <a 
+                                    key={idx} 
+                                    href="#" 
+                                    aria-label={`Visit our ${social.name} page`}
+                                    className={`w-[42px] h-[42px] rounded-full flex items-center justify-center bg-white dark:bg-white/5 text-slate-500 dark:text-slate-300 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-none border border-black/5 dark:border-white/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:text-white hover:shadow-lg ${social.color}`}
                                 >
                                     <social.icon size={17} />
                                 </a>
@@ -105,102 +77,65 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 style={{ fontWeight: 700, fontSize: '1.1rem', color: isDark ? '#fff' : '#0f172a', marginBottom: '1.5rem', letterSpacing: '-0.3px' }}>Explore</h3>
-                        <ul className="flex flex-col gap-3.5">
-                            {['Home', 'Destinations Gallery', 'About Us', 'Contact Support'].map((link, i) => {
-                                const path = link === 'Home' ? '/' : `/${link.split(' ')[0].toLowerCase()}`;
-                                return (
+                        <h3 className="font-bold text-[1.05rem] text-slate-900 dark:text-white mb-5 tracking-tight">Explore</h3>
+                        <ul className="flex flex-col gap-3">
+                            {EXPLORE_LINKS.map((link, i) => (
                                 <li key={i}>
-                                    <Link to={path} 
-                                        className="group flex items-center gap-2"
-                                        style={{ color: isDark ? '#94a3b8' : '#475569', textDecoration: 'none', fontSize: '0.95rem', transition: 'color 0.2s ease' }}
-                                        onMouseEnter={e => e.currentTarget.style.color = '#2563eb'}
-                                        onMouseLeave={e => e.currentTarget.style.color = isDark ? '#94a3b8' : '#475569'}
+                                    <Link 
+                                        to={link.path} 
+                                        className="group flex items-center gap-2 text-slate-600 dark:text-slate-400 text-[0.95rem] transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-500"
                                     >
-                                        <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" style={{ color: '#2563eb' }} />
-                                        <span>{link}</span>
+                                        <ArrowRight size={14} className="opacity-0 -ml-4 text-blue-600 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0" />
+                                        <span>{link.name}</span>
                                     </Link>
                                 </li>
-                            )})}
+                            ))}
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div>
-                        <h3 style={{ fontWeight: 700, fontSize: '1.1rem', color: isDark ? '#fff' : '#0f172a', marginBottom: '1.5rem', letterSpacing: '-0.3px' }}>Contact Us</h3>
-                        <ul className="flex flex-col gap-5">
-                            <li className="flex items-start gap-4">
-                                <div style={{ background: isDark ? 'rgba(37,99,235,0.1)' : '#eff6ff', padding: '10px', borderRadius: '10px', color: '#2563eb' }}>
-                                    <MapPin size={18} />
-                                </div>
-                                <span style={{ color: isDark ? '#94a3b8' : '#475569', fontSize: '0.95rem', lineHeight: 1.6, marginTop: '2px' }}>
-                                    123 Explorer Street,<br />Dhaka 1205, Bangladesh
-                                </span>
-                            </li>
-                            <li className="flex items-center gap-4">
-                                <div style={{ background: isDark ? 'rgba(37,99,235,0.1)' : '#eff6ff', padding: '10px', borderRadius: '10px', color: '#2563eb' }}>
-                                    <Phone size={18} />
-                                </div>
-                                <span style={{ color: isDark ? '#94a3b8' : '#475569', fontSize: '0.95rem' }}>+880 1234 567890</span>
-                            </li>
-                            <li className="flex items-center gap-4">
-                                <div style={{ background: isDark ? 'rgba(37,99,235,0.1)' : '#eff6ff', padding: '10px', borderRadius: '10px', color: '#2563eb' }}>
-                                    <Mail size={18} />
-                                </div>
-                                <span style={{ color: isDark ? '#94a3b8' : '#475569', fontSize: '0.95rem' }}>hello@banglago.com</span>
-                            </li>
+                        <h3 className="font-bold text-[1.05rem] text-slate-900 dark:text-white mb-5 tracking-tight">Contact Us</h3>
+                        <ul className="flex flex-col gap-4">
+                            {[
+                                { icon: MapPin, text: "123 Explorer Street,<br />Dhaka 1205, Bangladesh" },
+                                { icon: Phone, text: "+880 1234 567890" },
+                                { icon: Mail, text: "hello@banglago.com" }
+                            ].map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-4">
+                                    <div className="bg-blue-50 dark:bg-blue-600/10 p-2.5 rounded-lg text-blue-600 shrink-0">
+                                        <item.icon size={18} />
+                                    </div>
+                                    <span 
+                                        className="text-slate-600 dark:text-slate-400 text-[0.95rem] leading-relaxed mt-0.5"
+                                        dangerouslySetInnerHTML={{ __html: item.text }}
+                                    />
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Newsletter */}
                     <div>
-                        <h3 style={{ fontWeight: 700, fontSize: '1.1rem', color: isDark ? '#fff' : '#0f172a', marginBottom: '1.5rem', letterSpacing: '-0.3px' }}>Newsletter</h3>
-                        <p style={{ color: isDark ? '#94a3b8' : '#475569', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+                        <h3 className="font-bold text-[1.05rem] text-slate-900 dark:text-white mb-5 tracking-tight">Newsletter</h3>
+                        <p className="text-slate-600 dark:text-slate-400 text-[0.95rem] leading-relaxed mb-5">
                             Subscribe for the latest travel tips, hidden gems, and exclusive updates.
                         </p>
-                        <form onSubmit={handleSubscribe} className="relative w-full max-w-sm">
+                        <form onSubmit={handleSubscribe} className="relative w-full" aria-label="Newsletter Subscription Form">
+                            <label htmlFor="newsletter-email" className="sr-only">Email Address</label>
                             <input
+                                id="newsletter-email"
                                 type="email"
                                 placeholder="Your email address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                style={{
-                                    width: '100%',
-                                    background: isDark ? 'rgba(255,255,255,0.03)' : '#fff',
-                                    border: isDark ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.08)',
-                                    borderRadius: '12px',
-                                    padding: '14px 48px 14px 16px',
-                                    color: isDark ? '#fff' : '#0f172a',
-                                    fontSize: '0.95rem',
-                                    outline: 'none',
-                                    boxShadow: isDark ? 'inset 0 2px 4px rgba(0,0,0,0.2)' : 'inset 0 2px 4px rgba(0,0,0,0.02)',
-                                    transition: 'border-color  0.2s var(--ease-expo), box-shadow 0.2s var(--ease-expo)'
-                                }}
-                                onFocus={e => {
-                                    e.target.style.borderColor = '#2563eb';
-                                    e.target.style.boxShadow = '0 0 0 3px rgba(37,99,235,0.15)';
-                                }}
-                                onBlur={e => {
-                                    e.target.style.borderColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
-                                    e.target.style.boxShadow = isDark ? 'inset 0 2px 4px rgba(0,0,0,0.2)' : 'inset 0 2px 4px rgba(0,0,0,0.02)';
-                                }}
+                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl py-3 pl-4 pr-12 text-slate-900 dark:text-white text-[0.95rem] outline-none shadow-inner transition-all duration-200 focus:border-blue-600 focus:ring-[3px] focus:ring-blue-600/15"
                             />
                             <button
                                 type="submit"
-                                style={{
-                                    position: 'absolute', right: '6px', top: '6px', bottom: '6px',
-                                    aspectRatio: '1/1',
-                                    background: '#2563eb', color: '#fff',
-                                    borderRadius: '8px', border: 'none', cursor: 'pointer',
-                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    boxShadow: '0 4px 12px rgba(37,99,235,0.3)',
-                                    transition: 'background 0.2s ease, transform 0.2s ease'
-                                }}
-                                onMouseEnter={e => e.currentTarget.style.background = '#1d4ed8'}
-                                onMouseLeave={e => e.currentTarget.style.background = '#2563eb'}
-                                onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
-                                onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
+                                aria-label="Subscribe"
+                                className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-blue-600 text-white rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(37,99,235,0.3)] transition-all duration-200 hover:bg-blue-700 active:scale-95"
                             >
                                 <ArrowRight size={18} />
                             </button>
@@ -209,34 +144,22 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div style={{
-                    paddingTop: '2rem', paddingBottom: '1rem',
-                    borderTop: isDark ? '1px solid rgba(255,255,255,0.05)' : '1px solid rgba(0,0,0,0.05)',
-                    display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem'
-                }}>
-                    <p style={{ color: isDark ? '#64748b' : '#94a3b8', fontSize: '0.88rem' }}>
+                <div className="pt-8 pb-4 border-t border-black/5 dark:border-white/5 flex flex-wrap items-center justify-between gap-6">
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">
                         © {new Date().getFullYear()} BanglaGo. All rights reserved.
                     </p>
-                    <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.88rem' }}>
-                        {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((text, i) => (
-                            <Link key={i} to="#" 
-                                style={{ color: isDark ? '#64748b' : '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}
-                                onMouseEnter={e => e.currentTarget.style.color = isDark ? '#cbd5e1' : '#475569'}
-                                onMouseLeave={e => e.currentTarget.style.color = isDark ? '#64748b' : '#94a3b8'}
+                    <div className="flex gap-6 text-sm flex-wrap justify-center">
+                        {LEGAL_LINKS.map((text, i) => (
+                            <Link 
+                                key={i} 
+                                to="#" 
+                                className="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors duration-200"
                             >
                                 {text}
                             </Link>
                         ))}
                     </div>
                 </div>
-                
-                <style>
-                {`
-                    .footer-safe-area { display: block; height: 120px; width: 100%; }
-                    @media (min-width: 768px) { .footer-safe-area { display: none; } }
-                `}
-                </style>
-                <div className="footer-safe-area"></div>
             </div>
         </footer>
     );
